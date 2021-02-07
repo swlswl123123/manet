@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="521" height="220" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 521 220">
+    <style type="text/css"><![CDATA[
+.st2 {fill:#1f6391;font-family:宋体;font-size:10pt}
+.st1 {fill:#ffffff;font-family:宋体;font-size:10pt}
+]]></style>
+    <defs/>
+    <g transform="translate(-42,-70.14)">
+        <g id="shape1" transform="translate(88.5,76)">
+            <path d="M115.5,18L115.5,0L0,0L0,18L115.5,18z" fill="#3498db" stroke="#3498db"/>
+            <text class="st1">
+                <tspan y="13.5" x="19.3">网络组建阶段</tspan>
+            </text>
+        </g>
+        <g id="shape2" transform="translate(204,76)">
+            <path d="M357.5,18L357.5,0L0,0L0,18L357.5,18z" fill="#ee7c31" stroke="#ee7c31"/>
+            <text class="st1">
+                <tspan y="13.5" x="140.3">网络维持阶段</tspan>
+            </text>
+        </g>
+        <g id="shape3" transform="translate(88.5,120)">
+            <path d="M473,18L473,0L0,0L0,18L473,18z" fill="#ee7c31" stroke="#ee7c31"/>
+            <text class="st1">
+                <tspan y="13.5" x="198">网络维持阶段</tspan>
+            </text>
+        </g>
+        <g id="shape4" transform="translate(88.5,169)">
+            <path d="M223,18L223,0L0,0L0,18L223,18z" fill="#1bbc9d" stroke="#1bbc9d"/>
+            <text class="st1">
+                <tspan y="13.5" x="73">时间同步阶段</tspan>
+            </text>
+        </g>
+        <g id="shape5" transform="translate(312.5,169)">
+            <path d="M98,18L98,0L0,0L0,18L98,18z" fill="#3498db" stroke="#3498db"/>
+            <text class="st1">
+                <tspan y="13.5" x="10">网络组建阶段</tspan>
+            </text>
+        </g>
+        <g id="shape6" transform="translate(411.5,169)">
+            <path d="M150,18L150,0L0,0L0,18L150,18z" fill="#ee7c31" stroke="#ee7c31"/>
+            <text class="st1">
+                <tspan y="13.5" x="36">网络维持阶段</tspan>
+            </text>
+        </g>
+        <g transform="translate(102,233)">
+            <g id="shape7">
+                <path d="M0,0M28,14C28,21.7,21.7,28,14,28C6.3,28,0,21.7,0,14C0,6.3,6.3,0,14,0C21.7,0,28,6.3,28,14zM22.4,14C22.4,18.6,18.6,22.4,14,22.4C9.4,22.4,5.6,18.6,5.6,14C5.6,9.4,9.4,5.6,14,5.6C18.6,5.6,22.4,9.4,22.4,14z" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+                <text class="st2">
+                    <tspan y="49" x="-31">有时统入网节点</tspan>
+                </text>
+            </g>
+            <path d="M-4,0C-4,-2.2,-2.2,-4,-0,-4C2.2,-4,4,-2.2,4,-0C4,2.2,2.2,4,0,4C-2.2,4,-4,2.2,-4,0" id="shape8" transform="translate(14,14)" fill="#3498db" stroke="#3498db"/>
+        </g>
+        <g transform="translate(226,239)">
+            <g id="shape9">
+                <path d="M0,8C0,3.6,3.6,0,8,0C12.4,0,16,3.6,16,8C16,12.4,12.4,16,8,16C3.6,16,0,12.4,0,8z" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+                <text class="st2">
+                    <tspan y="42" x="-41.5">有时统未入网节点</tspan>
+                </text>
+            </g>
+            <path d="M-4.5,0C-4.5,-2.5,-2.5,-4.5,-0,-4.5C2.5,-4.5,4.5,-2.5,4.5,-0C4.5,2.5,2.5,4.5,0,4.5C-2.5,4.5,-4.5,2.5,-4.5,0" id="shape10" transform="matrix(0.89,-0.45,0.45,0.89,8,8)" fill="#3498db" stroke="#3498db"/>
+        </g>
+        <g id="shape11" transform="translate(341,233)">
+            <path d="M0,0M28,14C28,21.7,21.7,28,14,28C6.3,28,0,21.7,0,14C0,6.3,6.3,0,14,0C21.7,0,28,6.3,28,14zM22.4,14C22.4,18.6,18.6,22.4,14,22.4C9.4,22.4,5.6,18.6,5.6,14C5.6,9.4,9.4,5.6,14,5.6C18.6,5.6,22.4,9.4,22.4,14z" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+            <text class="st2">
+                <tspan y="49" x="-31">无时统入网节点</tspan>
+            </text>
+        </g>
+        <g id="shape12" transform="translate(468,239)">
+            <path d="M0,8C0,3.6,3.6,0,8,0C12.4,0,16,3.6,16,8C16,12.4,12.4,16,8,16C3.6,16,0,12.4,0,8z" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+            <text class="st2">
+                <tspan y="42" x="-41.5">无时统未入网节点</tspan>
+            </text>
+        </g>
+        <g transform="translate(45,115)">
+            <path d="M0,0M28,14C28,21.7,21.7,28,14,28C6.3,28,0,21.7,0,14C0,6.3,6.3,0,14,0C21.7,0,28,6.3,28,14zM22.4,14C22.4,18.6,18.6,22.4,14,22.4C9.4,22.4,5.6,18.6,5.6,14C5.6,9.4,9.4,5.6,14,5.6C18.6,5.6,22.4,9.4,22.4,14z" id="shape13" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+            <path d="M-4,0C-4,-2.2,-2.2,-4,-0,-4C2.2,-4,4,-2.2,4,-0C4,2.2,2.2,4,0,4C-2.2,4,-4,2.2,-4,0" id="shape14" transform="translate(14,14)" fill="#3498db" stroke="#3498db"/>
+        </g>
+        <g transform="translate(51,76)">
+            <path d="M0,8C0,3.6,3.6,0,8,0C12.4,0,16,3.6,16,8C16,12.4,12.4,16,8,16C3.6,16,0,12.4,0,8z" id="shape15" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+            <path d="M-4.5,0C-4.5,-2.5,-2.5,-4.5,-0,-4.5C2.5,-4.5,4.5,-2.5,4.5,-0C4.5,2.5,2.5,4.5,0,4.5C-2.5,4.5,-4.5,2.5,-4.5,0" id="shape16" transform="matrix(0.89,-0.45,0.45,0.89,8,8)" fill="#3498db" stroke="#3498db"/>
+        </g>
+        <path d="M0,8C0,3.6,3.6,0,8,0C12.4,0,16,3.6,16,8C16,12.4,12.4,16,8,16C3.6,16,0,12.4,0,8z" id="shape17" transform="translate(51,170)" fill="#ffffff" stroke-width="3" stroke="#3498db"/>
+    </g>
+</svg>

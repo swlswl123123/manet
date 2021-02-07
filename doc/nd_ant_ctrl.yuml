@@ -1,0 +1,12 @@
+// {type:activity}
+// {generate:true}
+
+(start)->(确定收发模式rti~b\(1,0.5\))->|wait|
+|wait|Ni时隙开始->(设定天线指向)->(ND1/ND2/ND3时隙)Ni时隙结束->(i++|i==num_n[mode]?)Y->(si = si + s_offset[mode])
+(i++|i==num_n[mode]?)N->|wait|
+(si = si + s_offset[mode])->(si%c_nos[mode] == 0?)
+(si%c_nos[mode] == 0?)N->(i=0)->|wait|
+(si%c_nos[mode] == 0?)Y->(ci++)->(ci%r_noc[mode] == 0?)Y->(ri++)
+(ci%r_noc[mode] == 0?)N->|wait|
+(ri++)->(ri%m_nor[mode] == 0?)N->(确定收发模式rti~b\(1,0.5\))
+(ri%m_nor[mode] == 0?)Y->(mode++)->(确定收发模式rti~b\(1,0.5\))

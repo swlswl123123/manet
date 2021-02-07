@@ -1,0 +1,5 @@
+// {type:sequence}
+// {generate:true}
+[Announcing Node]ND1>[Monitering Node]
+[Monitering Node]ND2>[Announcing Node]
+[Announcing Node]ND3>[Monitering Node]

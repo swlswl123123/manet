@@ -1,0 +1,5 @@
+// {type:activity}
+// {generate:true}
+
+(start)收到链路状态广播信息->(更新邻接矩阵权重)->(执行Dijkstra计算流程)->(计算单播转发表)->|wait|->(更新转发表和MPR节点表)->(end)
+(执行Dijkstra计算流程)->(计算MPR节点表)->(wait)

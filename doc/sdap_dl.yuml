@@ -1,0 +1,11 @@
+// {type:state}
+// {generate:true}
+(start)->(接收SDU)
+(接收SDU)[没有配置映射规则]->(映射到DRB0)
+(接收SDU)[有映射规则]->(根据规则映射到对应的DRB)
+(根据规则映射到对应的DRB)[RRC配置了包头]->(添加SDAP包头)
+(映射到DRB0)[RRC配置了包头]->(添加SDAP包头)
+(根据规则映射到对应的DRB)[RRC未配置包头]->(传送给PDCP层)
+(映射到DRB0)[RRC未配置包头]->(传送给PDCP层)
+(添加SDAP包头)->(传送给PDCP层)
+(传送给PDCP层)->(end)

@@ -1,0 +1,118 @@
+<svg width="482" viewBox="0 0 482 377" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="377">
+    <style type="text/css"><![CDATA[
+.st1 {fill:#303030;font-family:SimSun;font-size:10pt}
+.st2 {font-family:Times New Roman}
+]]></style>
+    <defs/>
+    <g transform="translate(-154,-107)">
+        <g transform="translate(155,110)">
+            <path fill="none" d="M94,56L94,0L0,0L0,56L94,56z" id="shape1" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="28" y="32">应用层</tspan>
+            </text>
+        </g>
+        <g transform="translate(155,166)">
+            <path fill="none" d="M94,55L94,0L0,0L0,55L94,55z" id="shape2" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="28" y="31.5">传输层</tspan>
+            </text>
+        </g>
+        <g transform="translate(155,221)">
+            <path fill="none" d="M94,55L94,0L0,0L0,55L94,55z" id="shape3" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="28" y="31.5">网络层</tspan>
+            </text>
+        </g>
+        <g transform="translate(155,276)">
+            <path fill="none" d="M94,55L94,0L0,0L0,55L94,55z" id="shape4" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="28" y="31.5">链路层</tspan>
+            </text>
+        </g>
+        <g transform="translate(155,331)">
+            <path fill="none" d="M94,56L94,0L0,0L0,56L94,56z" id="shape5" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="28" y="32">物理层</tspan>
+            </text>
+        </g>
+        <path fill="none" transform="translate(317.5,237)" d="M317,162L317,0L0,0L0,162L317,162z" id="shape6" stroke="#000000" stroke-dasharray="11,5"/>
+        <path fill="none" transform="translate(317.5,169)" d="M317,68L317,0L0,0L0,68L317,68z" id="shape7" stroke="#000000" stroke-dasharray="11,5"/>
+        <path fill="none" transform="translate(317.5,399)" d="M317,84L317,0L0,0L0,84L317,84z" id="shape8" stroke="#000000" stroke-dasharray="11,5"/>
+        <g transform="translate(495.5,108)" id="shape9">
+            <path fill="none" d="M128,46L128,0L0,0L0,46L128,46z" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="30" y="26.5">以太网</tspan>
+                <tspan class="st2">MAC</tspan>
+            </text>
+        </g>
+        <g transform="translate(332.5,183)" id="shape10">
+            <path fill="none" d="M128,46L128,0L0,0L0,46L128,46z" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="25" y="19.5">无线资源控制</tspan>
+                <tspan class="st2" x="47" y="33.5">(RRC)</tspan>
+            </text>
+        </g>
+        <g transform="translate(495.5,244)" id="shape11">
+            <path fill="none" d="M128,46L128,0L0,0L0,46L128,46z" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="12" y="19.5">服务数据适配协议</tspan>
+                <tspan class="st2" x="43" y="33.5">(SDAP)</tspan>
+            </text>
+        </g>
+        <g transform="translate(495.5,332)" id="shape12">
+            <path fill="none" d="M128,46L128,0L0,0L0,46L128,46z" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="25" y="19.5">媒介访问控制</tspan>
+                <tspan class="st2" x="45" y="33.5">(MAC)</tspan>
+            </text>
+        </g>
+        <g transform="translate(495.5,420)" id="shape13">
+            <path fill="none" d="M128,46L128,0L0,0L0,46L128,46z" stroke="#000000"/>
+            <text class="st1">
+                <tspan x="45" y="19.5">物理层</tspan>
+                <tspan class="st2" x="47" y="33.5">(PHY)</tspan>
+            </text>
+        </g>
+        <g transform="translate(396.5,229)" id="shape14">
+            <path fill="none" d="M0,0L0,38L94.6,38" stroke="#000000"/>
+            <path fill="#000000" d="M99,38L93.8,35C94.3,35.9,94.6,36.9,94.6,38C94.6,39.1,94.3,40.1,93.8,41L99,38" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+            <rect fill="#ffffff" x="19.9" y="31" width="59.3" height="14"/>
+            <text class="st1">
+                <tspan x="19.8" y="42">控制/配置</tspan>
+            </text>
+        </g>
+        <g transform="translate(559.5,154)" id="shape15">
+            <path fill="none" d="M0,4.4L0,85.6" stroke="#000000"/>
+            <path fill="#000000" d="M0,0L-3,5.2C-2.1,4.7,-1.1,4.4,0,4.4C1.1,4.4,2.1,4.7,3,5.2L0,0" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+            <path fill="#000000" d="M0,90L3,84.8C2.1,85.3,1.1,85.6,0,85.6C-1.1,85.6,-2.1,85.3,-3,84.8L0,90" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(559.5,290)" id="shape16">
+            <path fill="none" d="M0,4.4L0,37.6" stroke="#000000"/>
+            <path fill="#000000" d="M0,0L-3,5.2C-2.1,4.7,-1.1,4.4,0,4.4C1.1,4.4,2.1,4.7,3,5.2L0,0" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+            <path fill="#000000" d="M0,42L3,36.8C2.1,37.3,1.1,37.6,0,37.6C-1.1,37.6,-2.1,37.3,-3,36.8L0,42" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(559.5,378)" id="shape17">
+            <path fill="none" d="M0,4.4L0,37.6" stroke="#000000"/>
+            <path fill="#000000" d="M0,0L-3,5.2C-2.1,4.7,-1.1,4.4,0,4.4C1.1,4.4,2.1,4.7,3,5.2L0,0" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+            <path fill="#000000" d="M0,42L3,36.8C2.1,37.3,1.1,37.6,0,37.6C-1.1,37.6,-2.1,37.3,-3,36.8L0,42" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(396.5,229)" id="shape18">
+            <path fill="none" d="M0,0L0,126L94.6,126" stroke="#000000"/>
+            <path fill="#000000" d="M99,126L93.8,123C94.3,123.9,94.6,124.9,94.6,126C94.6,127.1,94.3,128.1,93.8,129L99,126" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+            <rect fill="#ffffff" x="19.9" y="117" width="59.3" height="14"/>
+            <text class="st1">
+                <tspan x="19.8" y="128">控制/配置</tspan>
+            </text>
+        </g>
+        <g transform="translate(396.5,229)" id="shape19">
+            <path fill="none" d="M0,0L.5,214L94.6,214" stroke="#000000"/>
+            <path fill="#000000" d="M99,214L93.8,211C94.3,211.9,94.6,212.9,94.6,214C94.6,215.1,94.3,216.1,93.8,217L99,214" stroke="#000000" stroke-width="1" stroke-linecap="round"/>
+            <rect fill="#ffffff" x="19.9" y="207" width="59.3" height="14"/>
+            <text class="st1">
+                <tspan x="19.8" y="218">控制/配置</tspan>
+            </text>
+        </g>
+        <path fill="none" transform="matrix(0.54,-0.84,0.84,0.54,249,276)" d="M0,0L127,0" id="shape20" stroke="#000000" stroke-dasharray="11,5"/>
+        <path fill="none" transform="matrix(0.72,0.69,-0.69,0.72,249,333)" d="M0,0L95.1,0" id="shape21" stroke="#000000" stroke-dasharray="11,5"/>
+    </g>
+</svg>

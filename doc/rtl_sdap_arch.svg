@@ -1,0 +1,204 @@
+<svg height="500" viewBox="0 0 553 500" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="553">
+    <style type="text/css"><![CDATA[
+.st3 {fill:#303030;font-family:Times New Roman;font-size:10pt}
+.st2 {fill:#303030;font-family:Times New Roman;font-size:6pt}
+.st1 {fill:#303030;font-family:Times New Roman;font-size:8pt}
+]]></style>
+    <defs/>
+    <g transform="translate(-1480.67,-915.81)">
+        <path transform="translate(1482,985.15)" fill="none" stroke="#000000" stroke-width="1.33333" d="M529,362L529,0L0,0L0,362L529,362z" id="shape1"/>
+        <g transform="translate(1879,1011.56)" id="shape2">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="15" x="36">AXIS</tspan>
+                <tspan y="28" x="23">REGISTER</tspan>
+            </text>
+        </g>
+        <g transform="translate(1747.12,1376)" id="shape3">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="21.5" x="9">M_AXI_BYPASS</tspan>
+            </text>
+        </g>
+        <g transform="translate(1747.12,1276.21)" id="shape4">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="21.5" x="15">S_AXI_BRAM</tspan>
+            </text>
+        </g>
+        <g transform="translate(1747.12,1076.62)" id="shape5">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="21.5" x="29">PARSER</tspan>
+            </text>
+        </g>
+        <g transform="translate(1777.12,1176.41)" id="shape6">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M19,38L38,19L19,0L0,19L19,38z"/>
+            <text class="st2">
+                <tspan y="21" x="11">CMP</tspan>
+            </text>
+        </g>
+        <g transform="translate(1913.5,1081.12)">
+            <g>
+                <path fill="none" stroke="#000000" stroke-width="1.33333" d="M14.5,29C22.5,29,29,22.5,29,14.5C29,6.5,22.5,0,14.5,0C6.5,0,0,6.5,0,14.5C0,22.5,6.5,29,14.5,29zM0,14.5L29,14.5" id="shape7"/>
+            </g>
+            <g transform="matrix(0,1,-1,0,29,0)">
+                <path fill="none" stroke="#000000" stroke-width="1.33333" d="M14.5,29C22.5,29,29,22.5,29,14.5C29,6.5,22.5,0,14.5,0C6.5,0,0,6.5,0,14.5C0,22.5,6.5,29,14.5,29zM0,14.5L29,14.5" id="shape9"/>
+            </g>
+        </g>
+        <g transform="translate(1796.12,1276.21)" id="shape11">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L0,-56.7"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M0,-61.8L-3.5,-55.8C-2.4,-56.4,-1.3,-56.7,0,-56.7C1.3,-56.7,2.4,-56.4,3.5,-55.8L0,-61.8" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1796.12,1114.62)" id="shape12">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L0,56.7"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M0,61.8L3.5,55.8C2.4,56.4,1.3,56.7,0,56.7C-1.3,56.7,-2.4,56.4,-3.5,55.8L0,61.8" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1815.12,1195.41)" id="shape13">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L90.8,0L90.8,14.7"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M90.8,19.7L94.2,13.7C93.2,14.3,92,14.7,90.8,14.7C89.5,14.7,88.3,14.3,87.3,13.7L90.8,19.7" stroke-linecap="round"/>
+            <text class="st2">
+                <tspan y="-8.3" x="18.3">SDAP Header</tspan>
+            </text>
+        </g>
+        <g transform="translate(1913.5,1095.62)" id="shape14">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L-54,0"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M-68.4,0L-51.4,9.8C-53.1,6.9,-54,3.6,-54,0C-54,-3.6,-53.1,-6.9,-51.4,-9.8L-68.4,0" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1928,1049.56)" id="shape15">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,17.2"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,31.6L9.8,14.6C6.9,16.3,3.6,17.2,0,17.2C-3.6,17.2,-6.9,16.3,-9.8,14.6L0,31.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1928,1110.12)" id="shape16">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,11.2"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,25.5L9.8,8.6C6.9,10.2,3.6,11.2,0,11.2C-3.6,11.2,-6.9,10.2,-9.8,8.6L0,25.5" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1796.12,1376)" id="shape17">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,-14.3L0,-47.4"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,0L9.8,-17C6.9,-15.3,3.6,-14.3,0,-14.3C-3.6,-14.3,-6.9,-15.3,-9.8,-17L0,0" stroke-linecap="round"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,-61.8L-9.8,-44.8C-6.9,-46.5,-3.6,-47.4,0,-47.4C3.6,-47.4,6.9,-46.5,9.8,-44.8L0,-61.8" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1879,1135.66)" id="shape18">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="21.5" x="13">UDL_FIFO_DL</tspan>
+            </text>
+        </g>
+        <g transform="translate(1879,1276.21)" id="shape19">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="21.5" x="8">EMAC_FIFO_DL</tspan>
+            </text>
+        </g>
+        <g transform="matrix(0,1,-1,0,1962,1215.1)">
+            <path transform="translate(30.4,34)" fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L7.6,0" id="shape20"/>
+            <path transform="translate(0,34)" fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L6.9,0" id="shape21"/>
+            <path transform="translate(0,56.22)" fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L6.9,0" id="shape22"/>
+            <path transform="translate(6.31,0)" fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L0,68L25.5,52.7L25.5,15.4L0,0z" id="shape23"/>
+        </g>
+        <g transform="translate(1928,1253.15)" id="shape24">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,8.7"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,23.1L9.8,6.1C6.9,7.8,3.6,8.7,0,8.7C-3.6,8.7,-6.9,7.8,-9.8,6.1L0,23.1" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1928,1173.66)" id="shape25">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,27.1"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,41.5L9.8,24.5C6.9,26.2,3.6,27.1,0,27.1C-3.6,27.1,-6.9,26.2,-9.8,24.5L0,41.5" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1645,1176.41)" id="shape26">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="21.5" x="11">FSM CONTROL</tspan>
+            </text>
+        </g>
+        <g transform="translate(1694,1176.41)" id="shape27">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L0,-80.8L48.1,-80.8"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M53.1,-80.8L47.1,-84.3C47.7,-83.2,48.1,-82.1,48.1,-80.8C48.1,-79.5,47.7,-78.3,47.1,-77.3L53.1,-80.8" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1743,1195.41)" id="shape28">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L29.1,0"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M34.1,0L28.1,-3.5C28.7,-2.4,29.1,-1.3,29.1,0C29.1,1.3,28.7,2.4,28.1,3.5L34.1,0" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1694,1214.41)" id="shape29">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L0,80.8L48.1,80.8"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M53.1,80.8L47.1,77.3C47.7,78.3,48.1,79.5,48.1,80.8C48.1,82.1,47.7,83.2,47.1,84.3L53.1,80.8" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1793.88,1250.65)" id="shape30">
+            <text class="st2">
+                <tspan y="6.5" x="7.1">SDAP Rule </tspan>
+                <tspan y="16.5" x="14.1">Entries</tspan>
+            </text>
+        </g>
+        <g transform="matrix(0,-1,1,0,1801.5,1181.1)" id="shape31">
+            <text class="st2">
+                <tspan y="6.5" x="26.1">Pasrse</tspan>
+                <tspan y="16.5" x="26.1">Result</tspan>
+            </text>
+        </g>
+        <g transform="translate(1694,1214.41)" id="shape32">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L0,19.7L194.9,19.7"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M200,19.7L194,16.3C194.6,17.3,194.9,18.5,194.9,19.7C194.9,21,194.6,22.2,194,23.2L200,19.7" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1512.88,1176.41)" id="shape33">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="15" x="27">HEADER </tspan>
+                <tspan y="28" x="26">REMOVE</tspan>
+            </text>
+        </g>
+        <path transform="translate(2011,1166.15)" fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0" id="shape34"/>
+        <g transform="translate(1561.88,1376)" id="shape35">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,-147.2"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,-161.6L-9.8,-144.6C-6.9,-146.3,-3.6,-147.2,0,-147.2C3.6,-147.2,6.9,-146.3,9.8,-144.6L0,-161.6" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1512.88,1376)" id="shape36">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="15" x="33">EMAC </tspan>
+                <tspan y="28" x="18">M_AXIS_UL</tspan>
+            </text>
+        </g>
+        <g transform="translate(1561.88,1176.41)" id="shape37">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,-206.9"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,-221.3L-9.8,-204.3C-6.9,-206,-3.6,-206.9,0,-206.9C3.6,-206.9,6.9,-206,9.8,-204.3L0,-221.3" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1512.88,917.15)" id="shape38">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="15" x="38">UDI </tspan>
+                <tspan y="28" x="20">S_AXIS_UL</tspan>
+            </text>
+        </g>
+        <g transform="translate(1879,917.15)" id="shape39">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="15" x="38">UDI </tspan>
+                <tspan y="28" x="18">M_AXIS_DL</tspan>
+            </text>
+        </g>
+        <g transform="translate(1928,955.15)" id="shape40">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,42.1"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,56.4L9.8,39.4C6.9,41.1,3.6,42.1,0,42.1C-3.6,42.1,-6.9,41.1,-9.8,39.4L0,56.4" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1879,1376)" id="shape41">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M98,38L98,0L0,0L0,38L98,38z"/>
+            <text class="st1">
+                <tspan y="15" x="33">EMAC</tspan>
+                <tspan y="28" x="20">S_AXIS_DL</tspan>
+            </text>
+        </g>
+        <g transform="translate(1928,1314.21)" id="shape42">
+            <path fill="none" stroke="#7e7e7e" stroke-width="10.6667" d="M0,0L0,47.4"/>
+            <path fill="#7e7e7e" stroke="#7e7e7e" stroke-width="1" d="M0,61.8L9.8,44.8C6.9,46.5,3.6,47.4,0,47.4C-3.6,47.4,-6.9,46.5,-9.8,44.8L0,61.8" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1645,1195.41)" id="shape43">
+            <path fill="none" stroke="#000000" stroke-width="1.33333" d="M0,0L-29.1,0"/>
+            <path fill="#000000" stroke="#000000" stroke-width="1" d="M-34.1,0L-28.1,3.5C-28.7,2.4,-29.1,1.3,-29.1,0C-29.1,-1.3,-28.7,-2.4,-28.1,-3.5L-34.1,0" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1670.5,1001)" id="shape44">
+            <text class="st3">
+                <tspan y="5.5" x="30">SDAP MODULE </tspan>
+                <tspan y="20.5" x="27">ARCHITECTURE</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

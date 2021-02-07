@@ -1,0 +1,5 @@
+// {type:activity}
+// {generate:true}
+(start)->(接收到广播数据包rinfo)-><>[seq_num较新]->(更新节点与链路状态表)-><2>[新发现的节点]->(回复本节点链路信息)->(end)
+<2>[已存在节点]->(end)
+<>[seq_num较旧]->(end)

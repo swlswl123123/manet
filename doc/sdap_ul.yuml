@@ -1,0 +1,8 @@
+// {type:activity}
+// {generate:true}
+
+(start)->(接收SDU)
+(接收SDU)-><a>[RRC配置了包头]->(分离包头提取PDU)
+<a>[RRC未配置包头]->(将PDU传送至上层)
+(分离包头提取PDU)->(将PDU传送至上层)
+(将PDU传送至上层)->(end)

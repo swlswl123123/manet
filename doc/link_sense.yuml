@@ -1,0 +1,6 @@
+// {type:activity}
+// {generate:true}
+
+(start)5s定时->(发送链路状态广播)->(start)
+(start)时隙分配表更新->(更新NOB字段)->(发送链路状态广播)->(start)
+(start)队列待传数据量更新->(更新LOAD字段)->(start)

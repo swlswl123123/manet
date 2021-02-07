@@ -1,0 +1,305 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 975 376" height="376" width="975">
+    <style type="text/css"><![CDATA[
+.st1 {fill:#303030;font-family:宋体;font-size:10pt}
+]]></style>
+    <defs>
+        <linearGradient x1="0%" id="lg1" y1="0%" y2="100%" x2="0%">
+            <stop stop-color="#70a1d3" offset="0"/>
+            <stop stop-color="#276cb4" offset="0.46"/>
+            <stop stop-color="#2362a2" offset="1"/>
+        </linearGradient>
+        <linearGradient x1="0%" id="lg2" y1="0%" y2="100%" x2="0%">
+            <stop stop-color="#c9dbee" offset="0"/>
+            <stop stop-color="#5d93cc" offset="0.52"/>
+            <stop stop-color="#2f6093" offset="1"/>
+        </linearGradient>
+        <linearGradient x1="0%" id="lg3" y1="0%" y2="100%" x2="0%">
+            <stop stop-color="#f1c3c4" offset="0"/>
+            <stop stop-color="#da5e60" offset="0.7"/>
+            <stop stop-color="#ce272a" offset="1"/>
+        </linearGradient>
+        <linearGradient x1="0%" id="lg4" y1="0%" y2="100%" x2="0%">
+            <stop stop-color="#cbdab5" offset="0"/>
+            <stop stop-color="#8ca950" offset="1"/>
+        </linearGradient>
+        <linearGradient x1="0%" id="lg5" y1="0%" y2="100%" x2="0%">
+            <stop stop-color="#ffffff" offset="0"/>
+            <stop stop-color="#fdfefe" offset="0.39"/>
+            <stop stop-color="#d7e2f0" offset="1"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-1227,-887.05)">
+        <g id="shape1" transform="translate(1463.8,1111.5)">
+            <path d="M128,46L128,0L0,0L0,46L128,46z" fill="none" stroke="#6d6d6d"/>
+            <text class="st1">
+                <tspan y="27.5" x="36">OpenSSL</tspan>
+            </text>
+        </g>
+        <g id="shape2" transform="translate(1232,1111.5)">
+            <path d="M128,46L128,0L0,0L0,46L128,46z" fill="none" stroke="#6d6d6d"/>
+            <text class="st1">
+                <tspan y="27.5" x="30">WebServer</tspan>
+            </text>
+        </g>
+        <g id="shape3" transform="translate(1232,1216.5)">
+            <path d="M128,46L128,0L0,0L0,46L128,46z" fill="none" stroke="#6d6d6d"/>
+            <text class="st1">
+                <tspan y="27.5" x="50">RRC</tspan>
+            </text>
+        </g>
+        <g transform="translate(2070.9,1104.5)">
+            <path d="M1.1,0L82.9,0C83.5,0,84,.6,84,1.2L84,58.8C84,59.4,83.5,60,82.9,60L1.1,60C.5,60,0,59.4,0,58.8L0,1.2C0,.6,.5,0,1.1,0z" id="shape4" fill="#1d67ac"/>
+            <path d="M1.2,0L82.9,0C83.5,0,84,.6,84,1.4L84,14.6L0,14.6L0,1.4C0,.6,.6,0,1.2,0z" id="shape5" fill="url(#lg1)" transform="translate(0,0.06)"/>
+            <path d="M0,0L82.2,0L82.2,43.5L0,43.5L0,0z" id="shape6" fill="#ffffff" transform="translate(0.91,15.65)"/>
+            <path d="M0,0L16.9,0L16.9,5.9L0,5.9L0,0z" id="shape7" fill="#c0c0c0" transform="translate(31.84,21.42)"/>
+            <path d="M0,0L82.2,0L82.2,3.4L0,3.4L0,0z" id="shape8" fill="#eeeeee" transform="translate(0.91,14.71)"/>
+            <path d="M0,0L8.7,0L8.7,5.1L0,5.1L0,0z" id="shape9" fill="url(#lg2)" transform="translate(60.94,0.05)"/>
+            <path d="M0,0L8.7,0L8.7,5.1L0,5.1L0,0z" id="shape10" fill="url(#lg2)" transform="translate(51.49,0.05)"/>
+            <path d="M0,0L11,0L11,5.1L0,5.1L0,0z" id="shape11" fill="url(#lg3)" transform="translate(70.27,0.05)"/>
+            <g transform="translate(74.1,0.99)">
+                <path d="M.1,2.5L2.6,.1C2.7,-0,3,-0,3.1,.1C3.3,.3,3.3,.5,3.1,.7L.7,3.1C.5,3.2,.3,3.2,.1,3.1C-0,2.9,-0,2.7,.1,2.5z" id="shape13" fill="#ffffff" transform="translate(-0,-0)"/>
+                <path d="M.1,2.5L2.6,.1C2.7,-0,3,-0,3.1,.1C3.3,.3,3.3,.5,3.1,.7L.7,3.1C.5,3.2,.3,3.2,.1,3.1C-0,2.9,-0,2.7,.1,2.5z" id="shape14" fill="#ffffff" transform="matrix(-1,0,0,1,3.3,-0)"/>
+            </g>
+            <g transform="translate(62.92,0.98)">
+                <path d="M0,0L4.7,0L4.7,3.2L0,3.2L0,0z" id="shape15" fill="#ffffff"/>
+                <path d="M0,0L3.4,0L3.4,2.1L0,2.1L0,0z" id="shape16" fill="#5e93cb" transform="translate(0.66,0.58)"/>
+            </g>
+            <path d="M0,2.6C0,1.2,1.2,0,2.7,0C4.1,0,5.3,1.2,5.3,2.6C5.3,4.1,4.1,5.2,2.7,5.2C1.2,5.2,0,4.1,0,2.6z" id="shape17" fill="url(#lg4)" transform="translate(1.99,5.92)"/>
+            <path d="M0,2.6C0,1.2,1.2,0,2.7,0C4.1,0,5.3,1.2,5.3,2.6C5.3,4.1,4.1,5.2,2.7,5.2C1.2,5.2,0,4.1,0,2.6z" id="shape18" fill="url(#lg4)" transform="translate(8.87,5.92)"/>
+            <g transform="translate(2.8,6.75)">
+                <path d="M0,0L1.9,0L1.9,1.6L0,1.6L0,0z" id="shape19" fill="#ffffff" transform="translate(1.81,0.99)"/>
+                <path d="M-0.9,1.8L.9,0L.9,3.6L-0.9,1.8z" id="shape20" fill="#ffffff" transform="translate(0.91,0)"/>
+            </g>
+            <g transform="matrix(-1,0,0,1,13.4,6.8)">
+                <path d="M0,0L1.9,0L1.9,1.6L0,1.6L0,0z" id="shape21" fill="#ffffff" transform="translate(1.81,0.99)"/>
+                <path d="M-0.9,1.8L.9,0L.9,3.6L-0.9,1.8z" id="shape22" fill="#ffffff" transform="translate(0.91,0)"/>
+            </g>
+            <g transform="translate(16.47,6.05)">
+                <path d="M1.5,0L1.5,1.5L0,1.5L1.5,0z" id="shape23" fill="#ffffff" transform="translate(3.3,0.29)"/>
+                <path d="M4.4,.8C4.4,.8,2.9,-0.8,1,.5C1,.5,-0.4,1.4,.1,3.2C.1,3.2,.4,4.7,2.3,5C2.3,5,3.7,5.1,4.6,3.9C4.6,3.9,5,3.4,5,2.6C5,2.6,4.7,2.2,4.2,2.6C4.2,2.6,4.2,3.8,2.9,4.1C2.9,4.1,1.7,4.4,1.1,3.3C1.1,3.3,.4,2.2,1.4,1.2C1.4,1.2,2.6,.2,4.4,.8z" id="shape24" fill="#ffffff"/>
+            </g>
+            <path d="M0,0L47.4,0L47.4,5.3L0,5.3L0,0z" id="shape25" fill="#c0c0c0" transform="translate(23.7,5.9)"/>
+            <path d="M0,0L46.5,0L46.5,4.5L0,4.5L0,0z" id="shape26" fill="#ffffff" transform="translate(24.15,6.31)"/>
+            <path d="M3.2,3.7L1.9,3L.7,3.7L1,2.3L1.4,1.2L2,0L2.6,1.2L3.9,1.4L3.2,3.7z" id="shape27" fill="#ffffff" transform="translate(72.84,6.35)"/>
+            <path d="M.5,0L2.8,0C3.1,0,3.3,.2,3.3,.4C3.3,.6,3.1,.8,2.8,.8L.5,.8C.2,.8,0,.6,0,.4C0,.2,.2,0,.5,0z" id="shape28" fill="#ffffff" transform="translate(77.86,6.75)"/>
+            <path d="M.5,0L2.8,0C3.1,0,3.3,.2,3.3,.4C3.3,.6,3.1,.8,2.8,.8L.5,.8C.2,.8,0,.6,0,.4C0,.2,.2,0,.5,0z" id="shape29" fill="#ffffff" transform="translate(77.86,8.01)"/>
+            <path d="M.5,0L2.8,0C3.1,0,3.3,.2,3.3,.4C3.3,.6,3.1,.8,2.8,.8L.5,.8C.2,.8,0,.6,0,.4C0,.2,.2,0,.5,0z" id="shape30" fill="#ffffff" transform="translate(77.86,9.37)"/>
+            <path d="M.5,.1L1.9,1.4C2,1.6,2,1.8,1.9,1.9C1.8,2,1.6,2,1.5,1.9L.1,.5C-0,.4,-0,.2,.1,.1C.2,-0,.4,-0,.5,.1z" id="shape31" fill="#c0c0c0" transform="translate(27.1,8.25)"/>
+            <path d="M0,1.3C0,.6,.6,-0,1.3,-0C2.1,-0,2.7,.6,2.7,1.3C2.7,2,2.1,2.6,1.3,2.6C.6,2.6,0,2,0,1.3z" id="shape32" fill="#c0c0c0" transform="translate(25.7,6.87)"/>
+            <path d="M0,.9C0,.4,.4,-0,1,-0C1.5,-0,1.9,.4,1.9,.9C1.9,1.5,1.5,1.9,1,1.9C.4,1.9,0,1.5,0,.9z" id="shape33" fill="#ffffff" transform="translate(26.08,7.24)"/>
+            <path d="M0,0L8.3,0L8.3,4.8L0,4.8L0,0z" id="shape34" fill="#e0e0e0" transform="translate(59.05,28.81)"/>
+            <path d="M0,0L17,0L17,10.8L0,10.8L0,0z" id="shape35" fill="#e0e0e0" transform="translate(13.24,42.35)"/>
+            <path d="M0,0L17,0L17,10.8L0,10.8L0,0z" id="shape36" fill="#e0e0e0" transform="translate(31.81,42.35)"/>
+            <path d="M0,0L17,0L17,10.8L0,10.8L0,0z" id="shape37" fill="#e0e0e0" transform="translate(50.39,42.35)"/>
+            <g transform="translate(78.83,17.21)">
+                <path d="M0,0L4.2,0L4.2,42L0,42L0,0z" id="shape38" fill="#f3f3f3"/>
+                <path d="M0,0L4.2,0L4.2,3.6L0,3.6L0,0z" id="shape39" fill="#dedede" transform="translate(0,38.33)"/>
+                <path d="M0,0L4.2,0L4.2,3.7L0,3.7L0,0z" id="shape40" fill="#dedede"/>
+                <path d="M0,0L4.2,0L4.2,11.4L0,11.4L0,0z" id="shape41" fill="#a0a0a0" transform="translate(0,5.99)"/>
+                <path d="M0,.8L1.6,-0.8L3.3,.8L0,.8z" id="shape42" fill="#898989" transform="translate(0.44,1.76)"/>
+                <path d="M0,.8L1.6,-0.8L3.3,.8L0,.8z" id="shape43" fill="#898989" transform="matrix(1,0,0,-1,0.4,40.2)"/>
+            </g>
+            <path d="M0,0L17.7,0L19.3,2.5L0,2.5L0,0z" id="shape44" fill="url(#lg5)" transform="translate(0.91,12.24)"/>
+            <path d="M0,0L17.7,0L19.3,2.5L0,2.5L0,0z" id="shape45" fill="url(#lg5)" transform="translate(20.27,12.24)"/>
+            <path d="M0,0L45,0L45,4.9L0,4.9L0,0z" id="shape46" fill="#c0c0c0" transform="translate(13.14,28.74)"/>
+            <path d="M0,0L44.1,0L44.1,4.2L0,4.2L0,0z" id="shape47" fill="#ffffff" transform="translate(13.57,29.12)"/>
+            <g transform="translate(14.87,29.53)">
+                <path d="M.5,.1L1.9,1.4C2,1.5,2,1.7,1.9,1.9C1.8,2,1.6,2,1.5,1.9L.1,.5C-0,.4,-0,.2,.1,.1C.2,-0,.4,-0,.5,.1z" id="shape48" fill="#c0c0c0" transform="translate(1.38,1.43)"/>
+                <path d="M0,1.3C0,.6,.6,-0,1.3,-0C2,-0,2.6,.6,2.6,1.3C2.6,2,2,2.6,1.3,2.6C.6,2.6,0,2,0,1.3z" id="shape49" fill="#c0c0c0" transform="translate(-0,0)"/>
+                <path d="M0,.9C0,.4,.4,-0,.9,-0C1.5,-0,1.9,.4,1.9,.9C1.9,1.4,1.5,1.9,.9,1.9C.4,1.9,0,1.4,0,.9z" id="shape50" fill="#ffffff" transform="translate(0.37,0.37)"/>
+            </g>
+            <text class="st1">
+                <tspan y="76.5" x="-43.6">浏览器:PCI-MANET管理页面</tspan>
+            </text>
+        </g>
+        <g id="shape51" transform="translate(1837.9,1111.5)">
+            <path d="M128,46L128,0L0,0L0,46L128,46z" fill="none" stroke="#6d6d6d"/>
+            <text class="st1">
+                <tspan y="27.5" x="36">OpenSSL</tspan>
+            </text>
+        </g>
+        <g id="shape52" transform="translate(1673.85,1093.5)">
+            <path d="M34.9,43C34.9,38.5,38.5,34.9,43,34.9C47.5,34.9,51.1,38.5,51.1,43C51.1,47.5,47.5,51.1,43,51.1C38.5,51.1,34.9,47.5,34.9,43zM2,43C2,20.4,20.4,2,43,2C65.6,2,84,20.4,84,43C84,65.6,65.6,84,43,84C20.4,84,2,65.6,2,43zM43,79.6C63.2,79.6,79.6,63.2,79.6,43C79.6,22.8,63.2,6.4,43,6.4C22.8,6.4,6.4,22.8,6.4,43C6.4,63.2,22.8,79.6,43,79.6zM39.9,31.2L39.9,23.8L29.2,23.8L42.9,10.1L56.5,23.8L45.9,23.8L45.9,31.2L39.9,31.2zM54.9,47.4L61.4,51.2L66.7,42L71.7,60.6L53,65.6L58.4,56.4L51.9,52.7L54.9,47.4zM31.1,47.4L24.6,51.2L19.3,42L14.3,60.6L33,65.6L27.6,56.4L34.1,52.7L31.1,47.4z" fill="#000000" fill-opacity="0.08"/>
+            <path d="M32.9,41C32.9,36.5,36.5,32.9,41,32.9C45.5,32.9,49.1,36.5,49.1,41C49.1,45.5,45.5,49.1,41,49.1C36.5,49.1,32.9,45.5,32.9,41zM0,41C0,18.4,18.4,0,41,0C63.6,0,82,18.4,82,41C82,63.6,63.6,82,41,82C18.4,82,0,63.6,0,41zM41,77.6C61.2,77.6,77.6,61.2,77.6,41C77.6,20.8,61.2,4.4,41,4.4C20.8,4.4,4.4,20.8,4.4,41C4.4,61.2,20.8,77.6,41,77.6zM37.9,29.2L37.9,21.8L27.2,21.8L40.9,8.1L54.5,21.8L43.9,21.8L43.9,29.2L37.9,29.2zM52.9,45.4L59.4,49.2L64.7,40L69.7,58.6L51,63.6L56.4,54.4L49.9,50.7L52.9,45.4zM29.1,45.4L22.6,49.2L17.3,40L12.3,58.6L31,63.6L25.6,54.4L32.1,50.7L29.1,45.4z" fill="#3e62ae" stroke-width="0.666667" stroke="#3e62ae"/>
+        </g>
+        <g transform="translate(1877.9,997.05)">
+            <path d="M39.7,42.1C41.8,40.1,43,37.3,43,34.4C43,33.6,42.9,32.7,42.7,32L42.7,0L0,0L0,50.3L21,50.3L18.6,54.7L25.6,53.5L29.9,58L32.6,48.5L36,57.8L40,52.3L48,54.2L39.7,42.1z" id="shape53" fill="#ffffff"/>
+            <path d="M2,45.6L2,2.1L37.9,2.1L37.9,24.5C38.7,25.1,39.4,25.8,40,26.6L40,0L0,0L0,47.6L19.9,47.6L21,45.5L2,45.6z" id="shape54" fill="#515150" transform="translate(1.44,1.26)"/>
+            <path d="M20.4,9.4C20.4,4.2,16.3,0,11.1,0C5.9,0,1.7,4.2,1.7,9.4C1.7,12.5,3.2,15.3,5.7,17L0,27.8L4.9,27L8,30.3L11.2,19L15.1,29.9L18.2,25.8L23.7,27.1L16.8,16.9C19,15.1,20.4,12.4,20.4,9.4zM11.1,16.9C6.9,16.9,3.5,13.5,3.5,9.4C3.5,5.2,6.9,1.8,11.1,1.8C15.2,1.8,18.6,5.2,18.6,9.4C18.6,13.5,15.2,16.9,11.1,16.9z" id="shape55" fill="#515150" transform="translate(21.25,25.09)"/>
+            <path d="M5.8,0C2.6,0,0,2.6,0,5.8C0,8.9,2.6,11.5,5.8,11.5C8.9,11.5,11.5,8.9,11.5,5.8C11.4,2.6,8.9,0,5.8,0zM5.8,10.3C3.2,10.3,1.3,8.2,1.3,5.8C1.3,3.3,3.3,1.3,5.8,1.3C8.2,1.3,10.3,3.3,10.3,5.8C10.3,8.2,8.3,10.3,5.8,10.3z" id="shape56" fill="#515150" transform="translate(26.57,28.69)"/>
+            <g transform="translate(11.17,8.54)">
+                <path d="M0,0L20.4,0L20.4,2.2L0,2.2L0,0z" id="shape57" fill="#515150"/>
+                <path d="M0,0L20.4,0L20.4,2.2L0,2.2L0,0z" id="shape58" fill="#515150" transform="translate(0,5.49)"/>
+                <path d="M0,0L20.4,0L20.4,2.2L0,2.2L0,0z" id="shape59" fill="#515150" transform="translate(0,10.88)"/>
+            </g>
+            <text class="st1">
+                <tspan y="74.5" x="-8.5">客户端证书</tspan>
+            </text>
+        </g>
+        <g transform="translate(1697.35,888.05)">
+            <path d="M0,16.2L8.3,16.2C8.3,16.2,5.4,9.1,8.3,0C8.3,.2,0,0,0,0C2.3,9.1,0,16.2,0,16.2z" id="shape60" fill="#eb6d71" transform="translate(13.35,12.09)" stroke="#eb6d71"/>
+            <path d="M0,6.8C0,3,3.1,0,7,0C10.8,0,13.9,3,13.9,6.8C13.9,10.5,10.8,13.5,7,13.5C3.1,13.5,0,10.5,0,6.8z" id="shape61" fill="#eb6d71" transform="translate(10.53,0)" stroke="#eb6d71"/>
+            <path d="M.8,0L11.9,0C12.3,0,12.7,.4,12.7,.8L12.7,5.1L0,5.1L0,.8C0,.4,.4,0,.8,0z" id="shape62" fill="#eb6d71" transform="translate(11.15,28.18)" stroke="#eb6d71"/>
+            <path d="M.8,0L34.2,0C34.6,0,35,.4,35,.8L35,11.7C35,12.2,34.6,12.5,34.2,12.5L.8,12.5C.4,12.5,0,12.2,0,11.7L0,.8C0,.4,.4,0,.8,0z" id="shape63" fill="#eb6d71" transform="translate(0,33.21)" stroke="#eb6d71"/>
+        </g>
+        <g id="shape64" transform="translate(1679.35,938.03)">
+            <text class="st1">
+                <tspan y="18.5" x="13">CA中心</tspan>
+            </text>
+        </g>
+        <g id="shape65" transform="matrix(0.91,0.42,-0.42,0.91,1734.9,919.1)">
+            <path d="M0,0C55.8,-50,139.4,-38.3,177.9,-6" fill="none" stroke-width="4" stroke="#6d6d6d"/>
+            <path d="M184.3,0L180.8,-11.5C180.4,-9.5,179.4,-7.6,177.9,-6C176.4,-4.4,174.6,-3.3,172.6,-2.7L184.3,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="-40.8" x="76.5" transform="matrix(0.91,-0.42,0.42,0.91,22.9,40.4)" width="53.1"/>
+            <text transform="matrix(0.91,-0.42,0.42,0.91,22.9,40.4)" class="st1">
+                <tspan y="-26.8" x="76.4">签发证书</tspan>
+            </text>
+        </g>
+        <g id="shape66" transform="translate(1603.83,1112.5)">
+            <path d="M63.1,19C63.1,29.6,61,38,58.5,38L8.3,38C9.7,33.5,10.6,26.5,10.6,19C10.6,11.5,9.7,4.5,8.3,0L58.4,0C61,0,63.1,8.4,63.1,19zM4.5,0C2,0,0,8.5,0,19C0,29.5,2,38,4.5,38C6.9,38,8.9,29.5,8.9,19C8.9,8.5,6.9,0,4.5,0z" fill="#00188f"/>
+            <text class="st1">
+                <tspan y="54.5" x="7.2">SSL隧道</tspan>
+            </text>
+        </g>
+        <g id="shape67" transform="translate(1767.87,1113.5)">
+            <path d="M58,21C58,32.7,56.1,42,53.8,42L7.7,42C8.9,37,9.7,29.3,9.7,21C9.7,12.7,8.9,5,7.7,0L53.7,0C56.1,0,58,9.3,58,21zM4.1,0C1.8,0,0,9.4,0,21C0,32.6,1.8,42,4.1,42C6.4,42,8.2,32.6,8.2,21C8.2,9.4,6.4,0,4.1,0z" fill="#00188f"/>
+            <text class="st1">
+                <tspan y="58.5" x="4.7">SSL隧道</tspan>
+            </text>
+        </g>
+        <g transform="translate(1254,1024.5)">
+            <path d="M1.1,0L82.9,0C83.5,0,84,.6,84,1.2L84,58.8C84,59.4,83.5,60,82.9,60L1.1,60C.5,60,0,59.4,0,58.8L0,1.2C0,.6,.5,0,1.1,0z" id="shape68" fill="#1d67ac"/>
+            <path d="M1.2,0L82.9,0C83.5,0,84,.6,84,1.4L84,14.6L0,14.6L0,1.4C0,.6,.6,0,1.2,0z" id="shape69" fill="url(#lg1)" transform="translate(0,0.06)"/>
+            <path d="M0,0L82.2,0L82.2,43.5L0,43.5L0,0z" id="shape70" fill="#ffffff" transform="translate(0.91,15.65)"/>
+            <path d="M0,0L16.9,0L16.9,5.9L0,5.9L0,0z" id="shape71" fill="#c0c0c0" transform="translate(31.84,21.42)"/>
+            <path d="M0,0L82.2,0L82.2,3.4L0,3.4L0,0z" id="shape72" fill="#eeeeee" transform="translate(0.91,14.71)"/>
+            <path d="M0,0L8.7,0L8.7,5.1L0,5.1L0,0z" id="shape73" fill="url(#lg2)" transform="translate(60.94,0.05)"/>
+            <path d="M0,0L8.7,0L8.7,5.1L0,5.1L0,0z" id="shape74" fill="url(#lg2)" transform="translate(51.49,0.05)"/>
+            <path d="M0,0L11,0L11,5.1L0,5.1L0,0z" id="shape75" fill="url(#lg3)" transform="translate(70.27,0.05)"/>
+            <g transform="translate(74.1,0.99)">
+                <path d="M.1,2.5L2.6,.1C2.7,-0,3,-0,3.1,.1C3.3,.3,3.3,.5,3.1,.7L.7,3.1C.5,3.2,.3,3.2,.1,3.1C-0,2.9,-0,2.7,.1,2.5z" id="shape77" fill="#ffffff" transform="translate(-0,-0)"/>
+                <path d="M.1,2.5L2.6,.1C2.7,-0,3,-0,3.1,.1C3.3,.3,3.3,.5,3.1,.7L.7,3.1C.5,3.2,.3,3.2,.1,3.1C-0,2.9,-0,2.7,.1,2.5z" id="shape78" fill="#ffffff" transform="matrix(-1,0,0,1,3.3,-0)"/>
+            </g>
+            <g transform="translate(62.92,0.98)">
+                <path d="M0,0L4.7,0L4.7,3.2L0,3.2L0,0z" id="shape79" fill="#ffffff"/>
+                <path d="M0,0L3.4,0L3.4,2.1L0,2.1L0,0z" id="shape80" fill="#5e93cb" transform="translate(0.66,0.58)"/>
+            </g>
+            <path d="M0,2.6C0,1.2,1.2,0,2.7,0C4.1,0,5.3,1.2,5.3,2.6C5.3,4.1,4.1,5.2,2.7,5.2C1.2,5.2,0,4.1,0,2.6z" id="shape81" fill="url(#lg4)" transform="translate(1.99,5.92)"/>
+            <path d="M0,2.6C0,1.2,1.2,0,2.7,0C4.1,0,5.3,1.2,5.3,2.6C5.3,4.1,4.1,5.2,2.7,5.2C1.2,5.2,0,4.1,0,2.6z" id="shape82" fill="url(#lg4)" transform="translate(8.87,5.92)"/>
+            <g transform="translate(2.8,6.75)">
+                <path d="M0,0L1.9,0L1.9,1.6L0,1.6L0,0z" id="shape83" fill="#ffffff" transform="translate(1.81,0.99)"/>
+                <path d="M-0.9,1.8L.9,0L.9,3.6L-0.9,1.8z" id="shape84" fill="#ffffff" transform="translate(0.91,0)"/>
+            </g>
+            <g transform="matrix(-1,0,0,1,13.4,6.8)">
+                <path d="M0,0L1.9,0L1.9,1.6L0,1.6L0,0z" id="shape85" fill="#ffffff" transform="translate(1.81,0.99)"/>
+                <path d="M-0.9,1.8L.9,0L.9,3.6L-0.9,1.8z" id="shape86" fill="#ffffff" transform="translate(0.91,0)"/>
+            </g>
+            <g transform="translate(16.47,6.05)">
+                <path d="M1.5,0L1.5,1.5L0,1.5L1.5,0z" id="shape87" fill="#ffffff" transform="translate(3.3,0.29)"/>
+                <path d="M4.4,.8C4.4,.8,2.9,-0.8,1,.5C1,.5,-0.4,1.4,.1,3.2C.1,3.2,.4,4.7,2.3,5C2.3,5,3.7,5.1,4.6,3.9C4.6,3.9,5,3.4,5,2.6C5,2.6,4.7,2.2,4.2,2.6C4.2,2.6,4.2,3.8,2.9,4.1C2.9,4.1,1.7,4.4,1.1,3.3C1.1,3.3,.4,2.2,1.4,1.2C1.4,1.2,2.6,.2,4.4,.8z" id="shape88" fill="#ffffff"/>
+            </g>
+            <path d="M0,0L47.4,0L47.4,5.3L0,5.3L0,0z" id="shape89" fill="#c0c0c0" transform="translate(23.7,5.9)"/>
+            <path d="M0,0L46.5,0L46.5,4.5L0,4.5L0,0z" id="shape90" fill="#ffffff" transform="translate(24.15,6.31)"/>
+            <path d="M3.2,3.7L1.9,3L.7,3.7L1,2.3L1.4,1.2L2,0L2.6,1.2L3.9,1.4L3.2,3.7z" id="shape91" fill="#ffffff" transform="translate(72.84,6.35)"/>
+            <path d="M.5,0L2.8,0C3.1,0,3.3,.2,3.3,.4C3.3,.6,3.1,.8,2.8,.8L.5,.8C.2,.8,0,.6,0,.4C0,.2,.2,0,.5,0z" id="shape92" fill="#ffffff" transform="translate(77.86,6.75)"/>
+            <path d="M.5,0L2.8,0C3.1,0,3.3,.2,3.3,.4C3.3,.6,3.1,.8,2.8,.8L.5,.8C.2,.8,0,.6,0,.4C0,.2,.2,0,.5,0z" id="shape93" fill="#ffffff" transform="translate(77.86,8.01)"/>
+            <path d="M.5,0L2.8,0C3.1,0,3.3,.2,3.3,.4C3.3,.6,3.1,.8,2.8,.8L.5,.8C.2,.8,0,.6,0,.4C0,.2,.2,0,.5,0z" id="shape94" fill="#ffffff" transform="translate(77.86,9.37)"/>
+            <path d="M.5,.1L1.9,1.4C2,1.6,2,1.8,1.9,1.9C1.8,2,1.6,2,1.5,1.9L.1,.5C-0,.4,-0,.2,.1,.1C.2,-0,.4,-0,.5,.1z" id="shape95" fill="#c0c0c0" transform="translate(27.1,8.25)"/>
+            <path d="M0,1.3C0,.6,.6,-0,1.3,-0C2.1,-0,2.7,.6,2.7,1.3C2.7,2,2.1,2.6,1.3,2.6C.6,2.6,0,2,0,1.3z" id="shape96" fill="#c0c0c0" transform="translate(25.7,6.87)"/>
+            <path d="M0,.9C0,.4,.4,-0,1,-0C1.5,-0,1.9,.4,1.9,.9C1.9,1.5,1.5,1.9,1,1.9C.4,1.9,0,1.5,0,.9z" id="shape97" fill="#ffffff" transform="translate(26.08,7.24)"/>
+            <path d="M0,0L8.3,0L8.3,4.8L0,4.8L0,0z" id="shape98" fill="#e0e0e0" transform="translate(59.05,28.81)"/>
+            <path d="M0,0L17,0L17,10.8L0,10.8L0,0z" id="shape99" fill="#e0e0e0" transform="translate(13.24,42.35)"/>
+            <path d="M0,0L17,0L17,10.8L0,10.8L0,0z" id="shape100" fill="#e0e0e0" transform="translate(31.81,42.35)"/>
+            <path d="M0,0L17,0L17,10.8L0,10.8L0,0z" id="shape101" fill="#e0e0e0" transform="translate(50.39,42.35)"/>
+            <g transform="translate(78.83,17.21)">
+                <path d="M0,0L4.2,0L4.2,42L0,42L0,0z" id="shape102" fill="#f3f3f3"/>
+                <path d="M0,0L4.2,0L4.2,3.6L0,3.6L0,0z" id="shape103" fill="#dedede" transform="translate(0,38.33)"/>
+                <path d="M0,0L4.2,0L4.2,3.7L0,3.7L0,0z" id="shape104" fill="#dedede"/>
+                <path d="M0,0L4.2,0L4.2,11.4L0,11.4L0,0z" id="shape105" fill="#a0a0a0" transform="translate(0,5.99)"/>
+                <path d="M0,.8L1.6,-0.8L3.3,.8L0,.8z" id="shape106" fill="#898989" transform="translate(0.44,1.76)"/>
+                <path d="M0,.8L1.6,-0.8L3.3,.8L0,.8z" id="shape107" fill="#898989" transform="matrix(1,0,0,-1,0.4,40.2)"/>
+            </g>
+            <path d="M0,0L17.7,0L19.3,2.5L0,2.5L0,0z" id="shape108" fill="url(#lg5)" transform="translate(0.91,12.24)"/>
+            <path d="M0,0L17.7,0L19.3,2.5L0,2.5L0,0z" id="shape109" fill="url(#lg5)" transform="translate(20.27,12.24)"/>
+            <path d="M0,0L45,0L45,4.9L0,4.9L0,0z" id="shape110" fill="#c0c0c0" transform="translate(13.14,28.74)"/>
+            <path d="M0,0L44.1,0L44.1,4.2L0,4.2L0,0z" id="shape111" fill="#ffffff" transform="translate(13.57,29.12)"/>
+            <g transform="translate(14.87,29.53)">
+                <path d="M.5,.1L1.9,1.4C2,1.5,2,1.7,1.9,1.9C1.8,2,1.6,2,1.5,1.9L.1,.5C-0,.4,-0,.2,.1,.1C.2,-0,.4,-0,.5,.1z" id="shape112" fill="#c0c0c0" transform="translate(1.38,1.43)"/>
+                <path d="M0,1.3C0,.6,.6,-0,1.3,-0C2,-0,2.6,.6,2.6,1.3C2.6,2,2,2.6,1.3,2.6C.6,2.6,0,2,0,1.3z" id="shape113" fill="#c0c0c0" transform="translate(-0,0)"/>
+                <path d="M0,.9C0,.4,.4,-0,.9,-0C1.5,-0,1.9,.4,1.9,.9C1.9,1.4,1.5,1.9,.9,1.9C.4,1.9,0,1.4,0,.9z" id="shape114" fill="#ffffff" transform="translate(0.37,0.37)"/>
+            </g>
+            <text class="st1">
+                <tspan y="76.5" x="-22">PCI-MANET管理页面</tspan>
+            </text>
+        </g>
+        <g transform="translate(1503.8,997.05)">
+            <path d="M39.7,42.1C41.8,40.1,43,37.3,43,34.4C43,33.6,42.9,32.7,42.7,32L42.7,0L0,0L0,50.3L21,50.3L18.6,54.7L25.6,53.5L29.9,58L32.6,48.5L36,57.8L40,52.3L48,54.2L39.7,42.1z" id="shape115" fill="#ffffff"/>
+            <path d="M2,45.6L2,2.1L37.9,2.1L37.9,24.5C38.7,25.1,39.4,25.8,40,26.6L40,0L0,0L0,47.6L19.9,47.6L21,45.5L2,45.6z" id="shape116" fill="#515150" transform="translate(1.44,1.26)"/>
+            <path d="M20.4,9.4C20.4,4.2,16.3,0,11.1,0C5.9,0,1.7,4.2,1.7,9.4C1.7,12.5,3.2,15.3,5.7,17L0,27.8L4.9,27L8,30.3L11.2,19L15.1,29.9L18.2,25.8L23.7,27.1L16.8,16.9C19,15.1,20.4,12.4,20.4,9.4zM11.1,16.9C6.9,16.9,3.5,13.5,3.5,9.4C3.5,5.2,6.9,1.8,11.1,1.8C15.2,1.8,18.6,5.2,18.6,9.4C18.6,13.5,15.2,16.9,11.1,16.9z" id="shape117" fill="#515150" transform="translate(21.25,25.09)"/>
+            <path d="M5.8,0C2.6,0,0,2.6,0,5.8C0,8.9,2.6,11.5,5.8,11.5C8.9,11.5,11.5,8.9,11.5,5.8C11.4,2.6,8.9,0,5.8,0zM5.8,10.3C3.2,10.3,1.3,8.2,1.3,5.8C1.3,3.3,3.3,1.3,5.8,1.3C8.2,1.3,10.3,3.3,10.3,5.8C10.3,8.2,8.3,10.3,5.8,10.3z" id="shape118" fill="#515150" transform="translate(26.57,28.69)"/>
+            <g transform="translate(11.17,8.54)">
+                <path d="M0,0L20.4,0L20.4,2.2L0,2.2L0,0z" id="shape119" fill="#515150"/>
+                <path d="M0,0L20.4,0L20.4,2.2L0,2.2L0,0z" id="shape120" fill="#515150" transform="translate(0,5.49)"/>
+                <path d="M0,0L20.4,0L20.4,2.2L0,2.2L0,0z" id="shape121" fill="#515150" transform="translate(0,10.88)"/>
+            </g>
+            <text class="st1">
+                <tspan y="74.5" x="-15">管理页面证书</tspan>
+            </text>
+        </g>
+        <g id="shape122" transform="matrix(-0.91,0.42,-0.42,-0.91,1696.9,919.1)">
+            <path d="M0,0C72,48.8,141.4,37.6,179.7,5.9" fill="none" stroke-width="4" stroke="#6d6d6d"/>
+            <path d="M186.2,0L174.5,2.5C176.4,3.1,178.2,4.3,179.7,5.9C181.2,7.5,182.1,9.4,182.5,11.4L186.2,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="20.6" x="84.7" transform="matrix(-0.91,-0.42,0.42,-0.91,198.4,103.7)" width="53.1"/>
+            <text transform="matrix(-0.91,-0.42,0.42,-0.91,198.4,103.7)" class="st1">
+                <tspan y="34.6" x="84.6">签发证书</tspan>
+            </text>
+        </g>
+        <g id="shape123" transform="translate(1296,1157.5)">
+            <path d="M0,11.3L-0,47.7" fill="none" stroke-width="6.66667" stroke="#6d6d6d"/>
+            <path d="M0,0L-7.7,13.4C-5.5,12.1,-2.8,11.3,0,11.3C2.8,11.3,5.5,12.1,7.7,13.4L0,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <path d="M-0,59L7.7,45.6C5.5,46.9,2.8,47.7,-0,47.7C-2.8,47.7,-5.5,46.9,-7.7,45.6L-0,59" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="17.5" x="-38" width="83.8"/>
+            <text class="st1">
+                <tspan y="31.5" x="-38.2">配置/显示数据</tspan>
+            </text>
+        </g>
+        <g id="shape124" transform="translate(1360,1134.5)">
+            <path d="M11.3,0L92.5,0" fill="none" stroke-width="6.66667" stroke="#6d6d6d"/>
+            <path d="M0,0L13.4,7.7C12.1,5.5,11.3,2.8,11.3,0C11.3,-2.8,12.1,-5.5,13.4,-7.7L0,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <path d="M103.8,0L90.4,-7.7C91.7,-5.5,92.5,-2.8,92.5,0C92.5,2.8,91.7,5.5,90.4,7.7L103.8,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="-41" x="23.1" width="70.5"/>
+            <rect fill="#ffffff" height="19" y="-22" x="29.2" width="58.3"/>
+            <text class="st1">
+                <tspan y="-27" x="23">HTTPS请求</tspan>
+                <tspan y="-8" x="29">/网页内容</tspan>
+            </text>
+        </g>
+        <g id="shape125" transform="translate(1965.9,1134.5)">
+            <path d="M11.3,0L93.7,0" fill="none" stroke-width="6.66667" stroke="#6d6d6d"/>
+            <path d="M0,0L13.4,7.7C12.1,5.5,11.3,2.8,11.3,0C11.3,-2.8,12.1,-5.5,13.4,-7.7L0,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <path d="M105,0L91.6,-7.7C92.9,-5.5,93.7,-2.8,93.7,0C93.7,2.8,92.9,5.5,91.6,7.7L105,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="-49" x="21.2" width="70.5"/>
+            <rect fill="#ffffff" height="19" y="-30" x="27.3" width="58.3"/>
+            <text class="st1">
+                <tspan y="-35" x="21.1">HTTPS请求</tspan>
+                <tspan y="-16" x="27.1">/网页内容</tspan>
+            </text>
+        </g>
+        <g id="shape126" transform="translate(1527.8,1157.5)">
+            <path d="M0,0L0,36.5L374.1,36.5L374.1,4.4" fill="none" stroke="#6d6d6d"/>
+            <path d="M374.1,0L371.1,5.2C372,4.7,373,4.4,374.1,4.4C375.2,4.4,376.2,4.7,377.1,5.2L374.1,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="27" x="141.7" width="93"/>
+            <text class="st1">
+                <tspan y="41" x="141.5">验证客户端证书</tspan>
+            </text>
+        </g>
+        <g id="shape127" transform="translate(1901.9,1111.5)">
+            <path d="M0,0L0,-30.5L-374.1,-30.5L-374.1,-4.4" fill="none" stroke="#6d6d6d"/>
+            <path d="M-374.1,0L-371.1,-5.2C-372,-4.7,-373,-4.4,-374.1,-4.4C-375.2,-4.4,-376.2,-4.7,-377.1,-5.2L-374.1,0" fill="#6d6d6d" stroke-width="1" stroke="#6d6d6d" stroke-linecap="round"/>
+            <rect fill="#ffffff" height="19" y="-40" x="-232.4" width="93"/>
+            <text class="st1">
+                <tspan y="-26" x="-232.5">验证服务器证书</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

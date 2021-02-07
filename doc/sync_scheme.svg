@@ -1,0 +1,350 @@
+<svg width="1286" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1286 417" xmlns:xlink="http://www.w3.org/1999/xlink" height="417">
+    <style type="text/css"><![CDATA[
+.st3 {fill:#0070c0;font-family:Times New Roman;font-size:16pt;font-weight:bold}
+.st9 {fill:#0070c0;font-family:Times New Roman;font-size:20pt}
+.st10 {fill:#303030;font-family:Times New Roman;font-size:10pt}
+.st11 {fill:#303030;font-family:Times New Roman;font-size:16pt;font-style:italic}
+.st1 {fill:#303030;font-family:Times New Roman;font-size:16pt}
+.st5 {fill:#ff0000;font-family:Times New Roman;font-size:16pt}
+.st7 {fill:#ff0000;font-family:Times New Roman;font-size:20pt}
+.st4 {fill:#ffc000;font-family:Times New Roman;font-size:16pt;font-weight:bold}
+.st6 {fill:#ffc000;font-family:Times New Roman;font-size:16pt}
+.st8 {fill:#ffc000;font-family:Times New Roman;font-size:20pt}
+.st12 {font-size:10.4pt;baseline-shift:sub}
+.st2 {font-style:italic}
+]]></style>
+    <defs/>
+    <g transform="translate(-42.33,-32.66)">
+        <path fill="none" stroke-width="2.66667" d="M0,0L1133,0" id="shape1" stroke="#ff0000" stroke-dasharray="11,5,2.5,5" transform="translate(113,114)"/>
+        <g id="shape2" transform="translate(113,416)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L0,-357.9" stroke="#000000"/>
+            <path stroke-linecap="round" fill="#000000" stroke-width="1" d="M0,-377L-3.2,-357.9L3.2,-357.9L0,-377" stroke="#000000"/>
+        </g>
+        <g id="shape3" transform="translate(45,41.5)">
+            <text class="st1">
+                <tspan x="8" y="17.5" class="st2">d</tspan>
+                <tspan>/km</tspan>
+            </text>
+        </g>
+        <path fill="none" stroke-width="2.66667" d="M0,0L1133,1" id="shape4" stroke="#ffc000" stroke-dasharray="11,5,2.5,5" transform="translate(113,188)"/>
+        <path fill="none" stroke-width="2.66667" d="M0,0L1141,0" id="shape5" stroke="#0070c0" stroke-dasharray="11,5,2.5,5" transform="translate(113,340)"/>
+        <g id="shape6" transform="translate(226,340)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L67.5,-134.9" stroke="#0070c0"/>
+            <path stroke-linecap="round" fill="#0070c0" stroke-width="1" d="M76,-152L64.6,-136.3L70.3,-133.5L76,-152" stroke="#0070c0"/>
+            <rect width="20.4" fill="#ffffff" x="27.6" y="-91.5" height="31"/>
+            <text class="st3">
+                <tspan x="27.5" y="-66.5">①</tspan>
+            </text>
+        </g>
+        <g id="shape7" transform="translate(415,188)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L67.5,134.9" stroke="#ffc000"/>
+            <path stroke-linecap="round" fill="#ffc000" stroke-width="1" d="M76,152L70.3,133.5L64.6,136.3L76,152" stroke="#ffc000"/>
+            <rect width="20.4" fill="#ffffff" x="27.6" y="60.5" height="31"/>
+            <text class="st4">
+                <tspan x="27.5" y="85.5">②</tspan>
+            </text>
+        </g>
+        <g id="shape8" transform="translate(604,340)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L65.6,-133.8" stroke="#0070c0"/>
+            <path stroke-linecap="round" fill="#0070c0" stroke-width="1" d="M74,-151L62.7,-135.2L68.5,-132.4L74,-151" stroke="#0070c0"/>
+            <rect width="20.4" fill="#ffffff" x="26.6" y="-91" height="31"/>
+            <text class="st3">
+                <tspan x="26.5" y="-66">③</tspan>
+            </text>
+        </g>
+        <g id="shape9" transform="translate(755,114)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L29.3,57" stroke="#ff0000"/>
+            <path stroke-linecap="round" fill="#ff0000" stroke-width="1" d="M38,74L32.1,55.5L26.4,58.5L38,74" stroke="#ff0000"/>
+            <rect width="20.4" fill="#ffffff" x="8.6" y="21.5" height="31"/>
+            <text class="st5">
+                <tspan x="8.5" y="46.5">④</tspan>
+            </text>
+        </g>
+        <g id="shape10" transform="translate(906,188)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L29.3,-57" stroke="#ffc000"/>
+            <path stroke-linecap="round" fill="#ffc000" stroke-width="1" d="M38,-74L26.4,-58.5L32.1,-55.5L38,-74" stroke="#ffc000"/>
+            <rect width="20.4" fill="#ffffff" x="8.6" y="-52.5" height="31"/>
+            <text class="st6">
+                <tspan x="8.5" y="-27.5">⑤</tspan>
+            </text>
+        </g>
+        <g id="shape11" transform="translate(1133,114)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L29.3,57" stroke="#ff0000"/>
+            <path stroke-linecap="round" fill="#ff0000" stroke-width="1" d="M38,74L32.1,55.5L26.4,58.5L38,74" stroke="#ff0000"/>
+            <rect width="20.4" fill="#ffffff" x="8.6" y="21.5" height="31"/>
+            <text class="st5">
+                <tspan x="8.5" y="46.5">⑥</tspan>
+            </text>
+        </g>
+        <g id="shape12" transform="translate(1276,95.2)">
+            <text class="st7">
+                <tspan x="-1.1" y="27.4">A</tspan>
+            </text>
+        </g>
+        <g id="shape13" transform="translate(1276,168.6)">
+            <text class="st8">
+                <tspan x="-0.3" y="27.4">B</tspan>
+            </text>
+        </g>
+        <g id="shape14" transform="translate(1276,320.45)">
+            <text class="st9">
+                <tspan x="-0.3" y="27.4">C</tspan>
+            </text>
+        </g>
+        <g transform="translate(282.5,159)">
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape15" stroke="#000000" transform="translate(19.5,56.69)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape16" stroke="#000000" transform="translate(56.5,56.69)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape17" stroke="#000000" transform="translate(396.5,57)"/>
+            <g id="shape18" transform="translate(0,1.5)">
+                <text class="st10">
+                    <tspan x="34" y="13">T</tspan>
+                </text>
+            </g>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape19" stroke="#000000" transform="translate(132.5,57)"/>
+            <g id="shape20" transform="translate(56.5,1.5)">
+                <text class="st10">
+                    <tspan x="25" y="13">ND2</tspan>
+                </text>
+            </g>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape21" stroke="#000000" transform="translate(208.5,57)"/>
+            <g id="shape22" transform="translate(133.5,1.5)">
+                <text class="st10">
+                    <tspan x="34" y="13">P</tspan>
+                </text>
+            </g>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape23" stroke="#000000" transform="translate(245.5,56.69)"/>
+            <g id="shape24" transform="translate(189.5,1.5)">
+                <text class="st10">
+                    <tspan x="34" y="13">T</tspan>
+                </text>
+            </g>
+            <g id="shape25" transform="translate(283.93,1.5)">
+                <text class="st10">
+                    <tspan x="20" y="13">RECV</tspan>
+                </text>
+            </g>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape26" stroke="#000000" transform="translate(226,366.69)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape27" stroke="#000000" transform="translate(151,366.69)"/>
+        <g id="shape28" transform="translate(156.25,345.5)">
+            <text class="st10">
+                <tspan x="25" y="13">ND1</tspan>
+            </text>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape29" stroke="#000000" transform="translate(302,366.69)"/>
+        <g id="shape30" transform="translate(226,345.5)">
+            <text class="st10">
+                <tspan x="34" y="13">P</tspan>
+            </text>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape31" stroke="#000000" transform="translate(339,367)"/>
+        <g id="shape32" transform="translate(282.5,345.5)">
+            <text class="st10">
+                <tspan x="34" y="13">T</tspan>
+            </text>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape33" stroke="#000000" transform="translate(491,368.69)"/>
+        <g id="shape34" transform="translate(377,345.5)">
+            <text class="st10">
+                <tspan x="20" y="13">RECV</tspan>
+            </text>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape35" stroke="#000000" transform="translate(528,368)"/>
+        <g id="shape36" transform="translate(471.5,345.5)">
+            <text class="st10">
+                <tspan x="34" y="13">T</tspan>
+            </text>
+        </g>
+        <g id="shape37" transform="translate(532,345.5)">
+            <text class="st10">
+                <tspan x="25" y="13">ND3</tspan>
+            </text>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape38" stroke="#000000" transform="translate(604,367)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape39" stroke="#000000" transform="translate(680,367)"/>
+        <g id="shape40" transform="translate(605,345.5)">
+            <text class="st10">
+                <tspan x="34" y="13">P</tspan>
+            </text>
+        </g>
+        <g transform="translate(774,161.25)">
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape41" stroke="#000000" transform="translate(19.5,56.69)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape42" stroke="#000000" transform="translate(56.5,56.69)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape43" stroke="#000000" transform="translate(396.5,57)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape44" stroke="#000000" transform="translate(132.5,57)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape45" stroke="#000000" transform="translate(208.5,57)"/>
+            <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape46" stroke="#000000" transform="translate(245.5,56.69)"/>
+            <g transform="translate(0,41.5)">
+                <g id="shape47">
+                    <text class="st10">
+                        <tspan x="34" y="13">T</tspan>
+                    </text>
+                </g>
+                <g id="shape48" transform="translate(56.5,0)">
+                    <text class="st10">
+                        <tspan x="25" y="13">ND2</tspan>
+                    </text>
+                </g>
+                <g id="shape49" transform="translate(133.5,0)">
+                    <text class="st10">
+                        <tspan x="34" y="13">P</tspan>
+                    </text>
+                </g>
+                <g id="shape50" transform="translate(189.5,0)">
+                    <text class="st10">
+                        <tspan x="34" y="13">T</tspan>
+                    </text>
+                </g>
+                <g id="shape51" transform="translate(283.93,0)">
+                    <text class="st10">
+                        <tspan x="20" y="13">RECV</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape52" stroke="#000000" transform="translate(755.5,141.7)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape53" stroke="#000000" transform="translate(680.5,141.7)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape54" stroke="#000000" transform="translate(831.5,141.7)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape55" stroke="#000000" transform="translate(868.5,142)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape56" stroke="#000000" transform="translate(1020.5,143.7)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape57" stroke="#000000" transform="translate(1057.5,143)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape58" stroke="#000000" transform="translate(1133.5,142)"/>
+        <path fill="none" stroke-width="1.33333" d="M0,0L0,-56.7" id="shape59" stroke="#000000" transform="translate(1209.5,142)"/>
+        <g id="shape60" transform="translate(678.5,84.5)">
+            <text class="st10">
+                <tspan x="25" y="13">ND1</tspan>
+            </text>
+        </g>
+        <g id="shape61" transform="translate(756,84.5)">
+            <text class="st10">
+                <tspan x="34" y="13">P</tspan>
+            </text>
+        </g>
+        <g id="shape62" transform="translate(812.5,84.5)">
+            <text class="st10">
+                <tspan x="34" y="13">T</tspan>
+            </text>
+        </g>
+        <g id="shape63" transform="translate(907,84.5)">
+            <text class="st10">
+                <tspan x="20" y="13">RECV</tspan>
+            </text>
+        </g>
+        <g id="shape64" transform="translate(1001.5,84.5)">
+            <text class="st10">
+                <tspan x="34" y="13">T</tspan>
+            </text>
+        </g>
+        <g id="shape65" transform="translate(1062,84.5)">
+            <text class="st10">
+                <tspan x="25" y="13">ND3</tspan>
+            </text>
+        </g>
+        <g id="shape66" transform="translate(1135,84.5)">
+            <text class="st10">
+                <tspan x="34" y="13">P</tspan>
+            </text>
+        </g>
+        <g id="shape67" transform="translate(113,416)">
+            <path fill="none" stroke-width="2.66667" d="M0,0L1189.9,0" stroke="#000000"/>
+            <path stroke-linecap="round" fill="#000000" stroke-width="1" d="M1209,0L1189.9,-3.2L1189.9,3.2L1209,0" stroke="#000000"/>
+        </g>
+        <g id="shape68" transform="translate(1269,423)">
+            <text class="st1">
+                <tspan x="10" y="17.5" class="st2">t</tspan>
+                <tspan>/μs</tspan>
+            </text>
+        </g>
+        <g id="shape69" transform="translate(45,404.5)">
+            <text class="st1">
+                <tspan x="25" y="17.5">0</tspan>
+            </text>
+        </g>
+        <g id="shape70" transform="translate(45,327.85)">
+            <text class="st1">
+                <tspan x="20" y="17.5">15</tspan>
+            </text>
+        </g>
+        <g id="shape71" transform="translate(45,176)">
+            <text class="st1">
+                <tspan x="20" y="17.5">45</tspan>
+            </text>
+        </g>
+        <g id="shape72" transform="translate(45,251.92)">
+            <text class="st1">
+                <tspan x="20" y="17.5">30</tspan>
+            </text>
+        </g>
+        <g id="shape73" transform="translate(45,102.6)">
+            <text class="st1">
+                <tspan x="20" y="17.5">60</tspan>
+            </text>
+        </g>
+        <g id="shape74" transform="translate(114,289.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">c1</tspan>
+            </text>
+        </g>
+        <g id="shape75" transform="translate(302.5,137.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">b2</tspan>
+            </text>
+        </g>
+        <g id="shape76" transform="translate(454,289.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">c2</tspan>
+            </text>
+        </g>
+        <g id="shape77" transform="translate(264,137.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">b1</tspan>
+            </text>
+        </g>
+        <g id="shape78" transform="translate(491,289.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">c3</tspan>
+            </text>
+        </g>
+        <g id="shape79" transform="translate(639,137.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">b3</tspan>
+            </text>
+        </g>
+        <g id="shape80" transform="translate(643,62.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">a4</tspan>
+            </text>
+        </g>
+        <g id="shape81" transform="translate(793.5,215)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">b4</tspan>
+            </text>
+        </g>
+        <g id="shape82" transform="translate(915,122.88)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">a5</tspan>
+            </text>
+        </g>
+        <g id="shape83" transform="translate(1016.5,62.5)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">a6</tspan>
+            </text>
+        </g>
+        <g id="shape84" transform="translate(1131,215)">
+            <text class="st11">
+                <tspan x="28" y="15.5">t</tspan>
+                <tspan y="19.4" class="st12">b6</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
