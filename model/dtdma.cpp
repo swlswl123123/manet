@@ -30,15 +30,51 @@ dtdma::dtdma() : scan_count(0), dt_count(0), my_seq_num(0)
 	status = INNET;
 	memset(beam_seq, 0x00, sizeof(beam_seq));
 	memset(beacon_table, 0x00, sizeof(beacon_table));
+	memset(forward_table, 0x00, sizeof(forward_table));
+	memset(seq_num, 0x00, sizeof(seq_num));
 
-	for (i = 0; i < 12; i++)
-        for (j = 0; j < 24; j++)
+	for (i = 0; i < 10; i++)
+        for (j = 0; j < 20; j++)
         {
-            scan_seq[0][i * 24 + j].alpha = i < 6 ? -15 / 2.0 - i * 15 : 15 / 2.0 + (i - 6) * 15;
-            scan_seq[0][i * 24 + j].gamma = 15 / 2.0 + j * 15;
-            scan_seq[1][i * 24 + j].alpha = -scan_seq[0][i * 24 + j].alpha;
-            scan_seq[1][i * 24 + j].gamma = (scan_seq[0][i * 24 + j].gamma + 180) > 360 ? (scan_seq[0][i * 24 + j].gamma + 180) - 360 : (scan_seq[0][i * 24 + j].gamma + 180);
+            scan_seq[0][i * 20 + j].alpha = i < 5 ? -18 / 2.0 - i * 18 : 18 / 2.0 + (i - 5) * 18;
+            scan_seq[0][i * 20 + j].gamma = 18 / 2.0 + j * 18;
+            scan_seq[1][i * 20 + j].alpha = -scan_seq[0][i * 20 + j].alpha;
+            scan_seq[1][i * 20 + j].gamma = (scan_seq[0][i * 20 + j].gamma + 180) > 360 ? (scan_seq[0][i * 20 + j].gamma + 180) - 360 : (scan_seq[0][i * 20 + j].gamma + 180);
         }
+
+	// set scan sequence
+	for (int i = 0; i < 50; i++)
+	{
+		vector<vector<int> > tmp(4, vector<int>(50, 0));
+		int num = 1;
+		// set main scan seq
+		for (int k = 0; k < 4; k++)
+		{
+			tmp[k][0] = 4*i+k+1;
+		}
+
+		// set sub scan seq
+		for (int m = 0; m < 4; m++)
+		{
+			for (int n = 0; n < 50; n++)
+			{
+				if (tmp[m][n] == 0)
+				{
+					if(num == 4*i+1)
+					{
+						num = 4*i+5;
+					}
+					tmp[m][n] = num++;
+				}
+			}
+		}
+
+		// add to vector
+		for (int k = 0; k < 4; k++)
+		{
+			sec_seq.insert(sec_seq.end(), tmp[k].begin(), tmp[k].end());
+		}
+	}
 
 };
 dtdma::~dtdma(){
@@ -97,7 +133,7 @@ void dtdma::send_proc(int d, int dc)
 				op_pk_nfd_set_pkt(q, "data", r);
 			}
 
-			if ((count += op_pk_total_size_get(q)) > BIT_PER_UNIT + dc*1000000)
+			if ((count += op_pk_total_size_get(q)) > BIT_PER_UNIT*dc)
 				break;
 			op_pk_fd_set_pkt(p, i, q, op_pk_total_size_get(q));
 			txQ[qid].pop();
@@ -191,6 +227,7 @@ void dtdma::recv_proc(Packet *p)
 				op_pk_destroy(q); // destroy unicast mac header, mine
 				break;
 			case EHTERTYPE_RINFO:
+				LOG("debug_recv_broadcast");
 				op_pk_send(r, RRC_LINK_BROADCAST);
 				op_pk_destroy(q); // destroy mac header
 				op_pk_destroy(s); // destroy broadcast header
@@ -236,7 +273,15 @@ void dtdma::proc_broadcast(Packet *p)
 	op_pk_nfd_get_int32(q, "HTL", &htl);
 	op_pk_nfd_get_int64(q, "SEQ", (long long *)&seq);
 
-	LOGD("[%d]proc_broadcast:dst = %d src = %d prev = %d type = %d ctrl = %d htl = %d seq = 0x%lx", id, dst, src, prev, type, ctrl, htl, seq);
+	LOG("[%d]proc_broadcast:dst = %d src = %d prev = %d type = %d ctrl = %d htl = %d seq = 0x%lx", id, dst, src, prev, type, ctrl, htl, seq);
+	if (id == 2)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			LOG("[2]forward_table[%d]:%d", i, forward_table[i].PRIMARY);
+		}
+	}
+	
 	if (htl == 0 || seq <= seq_num[src - 1])
 	{
 		op_pk_nfd_set_pkt(p, "data", q);
@@ -263,7 +308,7 @@ void dtdma::proc_broadcast(Packet *p)
 		op_pk_nfd_set_pkt(s, "data", r);
 		opnet_pri_packet ss(s, prio);
 		txQ[i].push(ss);
-		LOGD("[%d]BROADCAST PUSH txQ[%d]", id, i);
+		LOG("[%d]BROADCAST PUSH txQ[%d]", id, i);
 	}
 	op_pk_nfd_set_pkt(p, "data", q);
 	// op_pk_print(p);
@@ -283,6 +328,15 @@ void dtdma::proc_unicast(Packet *q)
 
 	int fwd = forward_table[dst - 1].id;
 
+	if (type == ETHERTYPE_IP)
+	{
+		int pkid = 0;
+		op_pk_nfd_get_pkt(p, "data", &r);
+		op_pk_fd_get_int32(r, 0, &pkid);
+		LOG("debug:pkid:%d", pkid);
+	}
+	
+
 	if (fwd != 0 && type == ETHERTYPE_IP)
 	{
 		int pkid = 0;
@@ -290,7 +344,6 @@ void dtdma::proc_unicast(Packet *q)
 		op_pk_fd_get_int32(r, 0, &pkid);
 		op_pk_nfd_set_pkt(p, "data", r);
 		LOG("[%d][%d]RELAY:[%d]->[%d] via [%d]", id, pkid, src, dst, fwd);
-		log_write(RELAY, 4, double(id), double(src), double(dst), double(fwd));
 	}
 
 	if (fwd != 0)

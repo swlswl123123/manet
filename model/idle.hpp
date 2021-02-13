@@ -9,9 +9,8 @@ private:
     dtdma_t *parent;
     bool isstar;
     friend class position_manager;
-    int d_consecutive;
-    int d_cnt;
-    bool d_flag;
+    int D_pre_type; // 0: send 1: receive -1: N
+    int D_pre_ID;
 public:
     idle();
     idle(dtdma_t *proc);

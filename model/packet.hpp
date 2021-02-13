@@ -1,7 +1,7 @@
 #pragma once
 
 // #define BIT_PER_UNIT 341250
-#define BIT_PER_UNIT 450000
+#define BIT_PER_UNIT 850000 // 850 us * 1000 Mbps
 typedef enum nstate
 {
     ASYNC,

@@ -121,7 +121,7 @@ dra_chanmatch_mt (OP_SIM_CONTEXT_ARG_OPT_COMMA Packet * pkptr)
     y = D;
 	dif_mag = sqrt(dif_x*dif_x+dif_y*dif_y+dif_z*dif_z);
 
-	if (dif_mag > 150e3)
+	if (dif_mag > 30e3)
 	{
 		op_td_set_int (pkptr, OPC_TDA_RA_MATCH_STATUS, OPC_TDA_RA_MATCH_IGNORE);
 		FOUT

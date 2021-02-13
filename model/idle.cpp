@@ -9,7 +9,7 @@
 using namespace dtdma_ns;
 
 idle::idle(){};
-idle::idle(dtdma_t *proc) : parent(proc), isstar(0), d_consecutive(0), d_cnt(0), d_flag(false){};
+idle::idle(dtdma_t *proc) : parent(proc), isstar(0), D_pre_type(-1), D_pre_ID(0){};
 idle::~idle(){};
 bool idle::cond(int cond)
 {
@@ -81,7 +81,7 @@ void idle::proc(int cond)
         Packet *p = op_pk_get(RRC_LINK);
         if (p != OPC_NIL)
         {
-            for (int i = 0; i < 34; i++)
+            for (int i = 0; i < 49; i++)
             {
                 int id, rti, type;
                 op_pk_fd_get_int32(p, 3 * i, &id);
@@ -132,8 +132,6 @@ void idle::proc(int cond)
             op_pk_destroy(p);
             break;
         }
-
-        LOG("size:%d",op_pk_total_size_get(q));
 
         int urg_type;
         switch (urg)
@@ -189,12 +187,12 @@ void idle::proc()
         for (int i = 0; i < 20; i++)
         {
             // log_write(QUEUE, 3, double(id), double(i), double(parent->txQ[i].size()));
-            LOG("[%d]txQ[%d] size  = %d", parent->id, i, parent->txQ[i].size());
+            LOG("[%d]txQ[%d] size  = %lu", parent->id, i, parent->txQ[i].size());
         }
 
         // statistic the number of occupied slot
         unsigned int B_total = 0;
-        for (int i = 0; i < 34; i++)
+        for (int i = 0; i < 49; i++)
         {
             if (parent->beacon_table[i].id != 0 && parent->beacon_table[i].type != balloc::PREORDAINED)
             {
@@ -251,38 +249,30 @@ void idle::proc()
             parent->scan_count = 0;
         }
 
-        // count the main scan sequence
-        if (parent->dt_count == 18)
+        // count the main scan sequence, complete one cycle scan
+        if (parent->dt_count == 4)
         {
             parent->dt_count = 0;
         }
     
         // arrange the mode of fix scan slot: N0
-        if (parent->dt_count % 18 == 0 && !isstar)
+        if(parent->scan_count = 0 && !isstar)
         {
             bool mode = ((int)op_dist_uniform(2)) == 0 ? false : true;
             parent->scan_mode[0] = mode;
         }
+
         // arrange modes of other slot: Ni
-        if (parent->scan_count % SCAN_ROUND[parent->status] == 0)
+        if (parent->dt_count == 0 && !isstar)
         {
-            bool mode;
-            if(isstar)
-            {
-                mode = parent->id == 1 ? false : true;
-                parent->scan_mode[0] = mode;
-            }
-            else
-            {
-                mode = ((int)op_dist_uniform(2)) == 0 ? false : true;
-            }
-            for(int i = 1; i < 18; i++)
+            bool mode = ((int)op_dist_uniform(2)) == 0 ? false : true;
+            for(int i = 1; i < 50; i++)
             {
                 parent->scan_mode[i] = mode;
-                LOGD("[%d]SCAN_MODE[%d]:%d", parent->id,i, parent->scan_mode);
+                LOGD("[%d]SCAN_MODE[%d]:%d", parent->id, i, parent->scan_mode);
             }
-            parent->dt_count++;
         }
+        parent->dt_count++;
     }
     else
     {
@@ -299,19 +289,14 @@ void idle::proc()
             }
             
             // to decide to be N or D
-            if((parent->txQ[parent->beacon_table[2*(sf-1)].id-1].size() == 0
-            && parent->beacon_table[2*(sf-1)].mode == balloc::SEND
-            || parent->beacon_table[2*(sf-1)].mode == balloc::INVALID)
-            && (parent->txQ[parent->beacon_table[2*(sf-1)+1].id-1].size() == 0
-            && parent->beacon_table[2*(sf-1)+1].mode == balloc::SEND
-            || parent->beacon_table[2*(sf-1)+1].mode == balloc::INVALID)
-            && d_consecutive == 0
-            ){
+            if(parent->txQ[parent->beacon_table[sf-1].id-1].size() == 0
+            && parent->beacon_table[sf-1].mode == balloc::SEND
+            || parent->beacon_table[sf-1].mode == balloc::INVALID)
+            {
                 op_intrpt_schedule_self(op_sim_time(), N | sf);
             } else
             {
-                op_intrpt_schedule_self(op_sim_time(), D | 2*(sf-1));
-                op_intrpt_schedule_self(op_sim_time() + D_INTERVAL, D | 2*(sf-1)+1);
+                op_intrpt_schedule_self(op_sim_time(), D | (sf-1));
             }
         }
         break;
@@ -320,14 +305,12 @@ void idle::proc()
         {
             
             int d = cond & 0x00000ff;
-            int d_tmp = d;
-            // when the slot setted to be D, jump the scan direction
-            if (d % 2)
-            {
-                parent->scan_count++;
-            }
-            
             LOG("[%d]D%d", id, d);
+            int d_tmp = d;
+
+            // when the slot setted to be D, jump the scan direction
+            parent->scan_count++;
+            
             // modify the antanne direction according to position and judge whether link is broken
             if (parent->pos_mngr->modify_beam_angle(d, parent) == 1)
             {
@@ -342,55 +325,39 @@ void idle::proc()
             angle.gamma = parent->beam_seq[parent->beacon_table[d].id - 1].gamma;
             angle.alpha = parent->beam_seq[parent->beacon_table[d].id - 1].alpha;
             angle.D = 0;
-            LOGD("[%d]D%d", parent->id, d);
             parent->ant.execute_pointing(angle);
 
             // to merge consecutive slots
-            if (d_flag)
-            {
-                d_cnt++;
-                if (d_cnt > d_consecutive)
-                {
-                    d_consecutive = 0;
-                    d_flag = false;
-                    d_cnt = 0;
-                }
-            }
+            // if (parent->beacon_table[d].id != 0)
+            // {
+            //     if (parent->beacon_table[d].type != balloc::PREORDAINED)
+            //     {
+            //         if (parent->beacon_table[d].mode == balloc::SEND && (D_pre_type != 0 || D_pre_ID != parent->beacon_table[d].id)) // ID and type of D are all different from pre, we can arrange not continous D
+            //         {
+            //             op_intrpt_schedule_self(op_sim_time() + TRANSIT_INTERVAL, DT | d);
+            //             D_pre_type = 0;
+            //             D_pre_ID = parent->beacon_table[d].id;
+            //         }
+            //         else if (parent->beacon_table[d].mode == balloc::RECV && (d+1 > 48 || parent->beacon_table[d+1].mode != balloc::RECV || parent->beacon_table[d+1].id != parent->beacon_table[d].id)) // compare with after slot
+            //         {
+            //             op_intrpt_schedule_self(op_sim_time() + (TRANSIT_INTERVAL + GAURD_INTERVAL + DT_INTERVAL) - 1e-6, DR | d);
+            //             D_pre_type = 1;
+            //             D_pre_ID = parent->beacon_table[d].id;
+            //         }
+            //     }
+            // }
 
-            if (!d_flag)
-            {
-                op_pk_get(FROM_TCB);
-            }
-            
-            bool d_ctrl = !d_flag;
-            bool inwhile = false;
-
-            while (!d_flag && d_tmp < 33 && parent->beacon_table[d_tmp].id != 0 && parent->beacon_table[d_tmp].type != balloc::PREORDAINED && parent->beacon_table[d_tmp+1].type != balloc::PREORDAINED
-                && parent->beacon_table[d_tmp+1].id == parent->beacon_table[d_tmp].id && parent->beacon_table[d_tmp+1].mode == parent->beacon_table[d_tmp].mode)          
-            {
-                d_tmp++;
-                d_consecutive++;
-                inwhile = true;
-            }
-
-            if (inwhile)
-            {
-                d_cnt = 0;
-                d_flag = true;
-            }
-            
-            LOG("find consecutive:%d %d", d_consecutive, d_cnt);
-            if (d_ctrl && parent->beacon_table[d].id != 0)
+            if (parent->beacon_table[d].id != 0)
             {
                 if (parent->beacon_table[d].type != balloc::PREORDAINED)
                 {
-                    if (parent->beacon_table[d].mode == balloc::SEND)
+                    if (parent->beacon_table[d].mode == balloc::SEND) 
                     {
                         op_intrpt_schedule_self(op_sim_time() + TRANSIT_INTERVAL, DT | d);
                     }
-                    else if (parent->beacon_table[d].mode == balloc::RECV)
+                    else if (parent->beacon_table[d].mode == balloc::RECV) 
                     {
-                        op_intrpt_schedule_self(op_sim_time() + (TRANSIT_INTERVAL + GAURD_INTERVAL + DT_INTERVAL)*(d_consecutive+1) - 1e-6, DR | d);
+                        op_intrpt_schedule_self(op_sim_time() + (TRANSIT_INTERVAL + GAURD_INTERVAL + DT_INTERVAL) - 1e-6, DR | d);
                     }
                 }
             }
@@ -418,9 +385,18 @@ void idle::proc()
         {
             LOG("[%d]DT%d ant = %.2f", parent->id, cond & 0x00000ff, parent->beam_seq[parent->beacon_table[cond & 0x000000ff].id - 1].gamma);
             int d = cond & 0x000000ff;
+            int d_index = d;
+            int num_continue_D = 1;
+            // statistic num of consecutive D slot
+            // while(d_index + 1 < 49 && parent->beacon_table[d_index].id == parent->beacon_table[d_index+1].id && parent->beacon_table[d_index].type == balloc::SEND && parent->beacon_table[d_index+1].type == balloc::SEND)
+            // {
+            //     num_continue_D++;
+            //     d_index++;
+            // }
             if (parent->beacon_table[d].mode == balloc::SEND && parent->beacon_table[d].type != balloc::PREORDAINED && parent->beacon_table[d].type != balloc::VACCANT)
             {
-                parent->send_proc(d, d_consecutive);
+                LOG("[%d]num_continue_D:start %d last %d", parent->id, d, num_continue_D);
+                parent->send_proc(d, num_continue_D);
             }
         }
         break;
@@ -441,14 +417,15 @@ void idle::proc()
         {
             op_pk_get(FROM_TCB);
             int ndid = cond & 0x000000ff;
+            D_pre_type = -1;
             //Set antenna bearing
             angle_t angle;
-            angle.alpha = parent->scan_seq[parent->scan_mode[ndid]? 0 : 1][sec_seq[parent->scan_count]].alpha;
-            angle.gamma = parent->scan_seq[parent->scan_mode[ndid]? 0 : 1][sec_seq[parent->scan_count]].gamma;
+            angle.alpha = parent->scan_seq[parent->scan_mode[ndid]? 0 : 1][parent->sec_seq[parent->scan_count]].alpha;
+            angle.gamma = parent->scan_seq[parent->scan_mode[ndid]? 0 : 1][parent->sec_seq[parent->scan_count]].gamma;
             LOG("[%d]N%d alpha = %f,gamma = %f", parent->id, (cond & 0x00000ff),angle.alpha,angle.gamma);
             parent->cur_scan_sec = ndid;
             parent->ant.execute_pointing(angle);
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++) // three hand shake
             {
                 op_intrpt_schedule_self(op_sim_time() + i * N_INTERVAL/3 + TRANSIT_INTERVAL, ND | (2 * i));
                 op_intrpt_schedule_self(op_sim_time() + (i + 1) * N_INTERVAL/3 - 1e-6, ND | (2 * i + 1));
@@ -519,7 +496,7 @@ void idle::proc()
                         op_pk_fd_get_int32(p, 1, &prev);
                         op_pk_fd_get_int32(p,2,&type);
                         op_pk_fd_get_int32(p,3,&dst);
-                        LOG("[%d]type = %d prev = %d dst = %d",parent->id,type,prev,dst);
+                        LOG("[%d]type = %d prev = %d dst = %d",parent->id, type, prev, dst);
 
                         if(cond == (ND | 0x01) && type == balloc::HELLO
                         || cond == (ND | 0x03) && type == balloc::REQ

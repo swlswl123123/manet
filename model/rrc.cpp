@@ -23,7 +23,7 @@ rrc::rrc() : qcnt(0), isstar(0)
         LOGD("user id not exits!");
     }
     router.add_vertex(node(id));
-
+    memset(Q, 0x00, sizeof(Q));
     allocator = new balloc::allocator(id);
 };
 
@@ -36,17 +36,17 @@ void rrc::print_forward_table()
 
     router.Dijkstra(router.get_vertex(id).first);
 
-    for (auto n = vtx.begin(); n != vtx.end(); ++n)
-    {
-        // LOG("[%d]-.-.->[%d]", id, n->get_id());
-        for (int i = 0; i < 34; i++)
-        {
-            if (n->get_bov().links[i].id != 0)
-            {
-                // LOG("[%d]NEIGHBOR:[%d] %s [%d]",id,n->get_id(),n->rti[i]?"->":"<-",n->bov[i]);
-            }
-        }
-    }
+    // for (auto n = vtx.begin(); n != vtx.end(); ++n)
+    // {
+    //     // LOG("[%d]-.-.->[%d]", id, n->get_id());
+    //     for (int i = 0; i < 49; i++)
+    //     {
+    //         if (n->get_bov().links[i].id != 0)
+    //         {
+    //             // LOG("[%d]NEIGHBOR:[%d] %s [%d]",id,n->get_id(),n->rti[i]?"->":"<-",n->bov[i]);
+    //         }
+    //     }
+    // }
 
     std::set<int> reachable;
     for (auto n = fwd.begin(); n != fwd.end(); ++n)
@@ -64,25 +64,21 @@ void rrc::print_beacon_table()
 
     auto self = router.get_vertex(id).first;
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         LOG("[%d]BEACON_TABLE[%d] id = %d RTI = %d MODE = %d", id, i, self.get_bov().links[i].id, self.get_bov().links[i].mode, self.get_bov().links[i].type);
     }
 }
 
-void rrc::print_neighbors()
-{
-}
-
 void rrc::alloc_ext_beacon(int dst, int num)
 {
-    node_t self = router.get_vertex(id).first;
-    auto n = router.get_vertex(dst);
-    if (!n.second)
+    node_t self = router.get_vertex(id).first;  // find self beacon table in router
+    auto n = router.get_vertex(dst);            // find target object in router
+    if (!n.second)                              // not find target
     {
         return;
     }
-    node_t nb = n.first;
+    node_t nb = n.first;                        // target beacon table
 
     {
         using namespace balloc;
@@ -96,7 +92,7 @@ void rrc::alloc_ext_beacon(int dst, int num)
 
         auto ret = allocator->req_beacon(n.first.get_bov(), EXTENDED_BALLOC, op_sim_time() * 1e6, num);
 
-        if (ret.second)
+        if (ret.second)     // update self beacon table and router
         {
             auto bt = allocator->get_beacon_table();
             router.add_vertex(node(bt, allocator::session::get_seq_id()));
@@ -108,7 +104,6 @@ void rrc::alloc_ext_beacon(int dst, int num)
         {
             Packet *p = op_pk_create(0);
             Packet *q = msg2pkt(j->second);
-            op_pk_fd_set_int32(q, 252, op_sim_time()*1e6, 32);
             op_pk_fd_set_int32(p, 0, j->first, 8);
             op_pk_fd_set_pkt(p, 1, q, op_pk_total_size_get(q));
             op_pk_send(p, BACH_DL);
@@ -164,7 +159,7 @@ void idle::proc(int cond)
     case ON_LINK_UPDATE:
     {
 
-        LOGD("[%d]ON_LINK_UPDATE", parent->id);
+        LOG("[%d]ON_LINK_UPDATE", parent->id);
         parent->proc_link_update(op_pk_get(LBCH_UL));
     }
     break;
@@ -211,7 +206,7 @@ void idle::proc(int cond)
         Packet *p = op_pk_get(BCCH_UL);
 
         auto self = parent->router.get_vertex(parent->id).first;
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 48; i++)
         {
             unsigned long long size = 0;
             op_pk_fd_get_int64(p, i, (long long *)&size);
@@ -223,7 +218,7 @@ void idle::proc(int cond)
                 int width = self || nb;
                 if ((int)(ceil((double)(parent->Q[i])) / BIT_PER_UNIT) > width)
                 {
-
+                    LOG("[%d][%d]txq[%d] width[%d]", id, i, parent->Q[i], width);
                     LOG("[%d]->[%d]BALLOC NEED = %d", parent->id, i + 1, (int)(ceil((double)(parent->Q[i]) / BIT_PER_UNIT)) - width);
                     // to find which beacon table dst locate
                     parent->alloc_ext_beacon(nb.get_id(), (int)(ceil((double)(parent->Q[i]) / BIT_PER_UNIT)) - width);
@@ -277,9 +272,9 @@ int rrc::calc_potential_free(int qid)
     int free = 0;
     long long sum[48] = {0};
 
-    auto bt = allocator->get_beacon_table();
+    auto bt = allocator->get_beacon_table();  // self beacon table
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         if (bt.links[i].type == VACCANT)
         {
@@ -288,14 +283,14 @@ int rrc::calc_potential_free(int qid)
     }
     LOG("[%d]BALLOC FREE = %d", id, free);
 
-    for (int i = 0; i < 20; i++)
+    for (int i = 0; i < 48; i++)
     {
         if (qid == i + 1)
             continue;
         sum[i] = Q[i];
-        sum[i] = sum[i] / BIT_PER_UNIT;
+        sum[i] = sum[i] / BIT_PER_UNIT;     // according to txQ, calculate number of slots needed
 
-        for (int j = 0; j < 34; j++)
+        for (int j = 0; j < 49; j++)        // minus the allocated slots
         {
             if (bt.links[j].id == i + 1 && bt.links[j].mode == SEND)
             {
@@ -307,45 +302,29 @@ int rrc::calc_potential_free(int qid)
             sum[i] = 0;
         }
         ret += sum[i];
-        if (id == 2)
-        {
-            printf("ret::%d\n",ret);
-        }
     }
     int self_need = Q[qid-1] / BIT_PER_UNIT;
     LOG("[%d]self need:%d ,ret:%d", id, self_need, ret);
 
     LOG("[%d]BALLOC POT FREE = %d", id, (int)ceil(free * ((double)self_need / (ret+self_need))));
-    return (int)ceil(free * ((double)self_need / (ret+self_need)));
+    return (int)ceil(free * ((double)self_need / (ret+self_need)));         // allocate in proportion
 }
 
 void rrc::proc_balloc(Packet *p)
 {
     using namespace balloc;
-    int time_stamp, cur_time = op_sim_time() * 1e6, type;
-    op_pk_fd_get_int32(p, 2, &type);
-    if (type == 1)
-    {
-        op_pk_fd_get_int32(p, 252, &time_stamp);
-    }
-    
     auto msg = pkt2msg(p);
-    auto ret = allocator->on_recv(msg, op_sim_time() * 1e6);
+    auto ret = allocator->on_recv(msg, op_sim_time() * 1e6); // req: give the allocation ack: agree or deny
 
     switch (msg.phase)
     {
     case REQ:
     {
-        if (cur_time - time_stamp > (0.036 * 1e6))
-        {
-            LOG("find over time");
-            return;
-        }
         if (ret.first == nullptr)
             return;
 
         beacon_info_t info = msg.info;
-        for (int i = 0; i < 34; i++)
+        for (int i = 0; i < 49; i++)
         {
             if (info.links[i].command == ALLOCATE)
             {
@@ -360,6 +339,12 @@ void rrc::proc_balloc(Packet *p)
                     info.links[i].type = VACCANT;
                 }
             }
+            else if (info.links[i].command == RELEASE)      // agree or not, target is unvalid
+            {
+                info.links[i].id = 0;
+                info.links[i].mode = INVALID;
+                info.links[i].type = VACCANT;
+            }           
         }
         router.add_vertex(node(info, msg.session));
 
@@ -377,7 +362,7 @@ void rrc::proc_balloc(Packet *p)
         {
             // LOG("[%d]update self node",id);
             auto bt = allocator->get_beacon_table();
-            router.add_vertex(node(bt, allocator::session::get_seq_id()));
+            router.add_vertex(node(bt, allocator::session::get_seq_id())); // update self node in router
         }
 
         update_beacon_table();
@@ -387,17 +372,20 @@ void rrc::proc_balloc(Packet *p)
     case ACK:
     {
         beacon_info_t info = msg.info;
-        for (int i = 0; i < 34; i++)
+        for (int i = 0; i < 49; i++)
         {
-            if (msg.info.links[i].ack == APPROVE)
+            if (info.links[i].command == ALLOCATE)
             {
-                info.links[i].id = id;
-            }
-            else if (msg.info.links[i].ack == DENIEL)
-            {
-                info.links[i].id = 0;
-                info.links[i].type = VACCANT;
-                info.links[i].mode = INVALID;
+                if (msg.info.links[i].ack == APPROVE)
+                {
+                    info.links[i].id = id;
+                }
+                else if (msg.info.links[i].ack == DENIEL)
+                {
+                    info.links[i].id = 0;
+                    info.links[i].type = VACCANT;
+                    info.links[i].mode = INVALID;
+                }
             }
         }
         router.add_vertex(node(info, msg.session));
@@ -442,7 +430,7 @@ void rrc::update_beacon_table()
         Packet *t = op_pk_create(0);
         node_t self = router.get_vertex(id).first;
         balloc::beacon_info_t info = allocator->get_beacon_table();
-        for (int i = 0; i < 34; i++)
+        for (int i = 0; i < 49; i++)
         {
             op_pk_fd_set_int32(t, 3 * i, info.links[i].id, 8);
             op_pk_fd_set_int32(t, 3 * i + 1, info.links[i].mode, 8);
@@ -491,6 +479,7 @@ void rrc::update_forward_table()
 
 void rrc::send_link_broadcast()
 {
+    LOG("debug_send_link_broadcast");
     Packet *s = generate_link_broadcast();
     op_pk_send(s, LBCH_DL);
 }
@@ -559,7 +548,7 @@ void rrc::proc_nd(const balloc::balloc_msg_t &msg)
         op_pk_send_quiet(p, NDCH_DL);
 
         balloc::beacon_info_t info = msg.info;
-        for (int i = 0; i < 34; i++)
+        for (int i = 0; i < 49; i++)
         {
             if (info.links[i].command == balloc::ALLOCATE)
             {
@@ -609,7 +598,7 @@ void rrc::proc_nd(const balloc::balloc_msg_t &msg)
 
             auto ret = allocator->on_recv(msg, op_sim_time() * 1e6);
 
-            for (int i = 0; i < 34; i++)
+            for (int i = 0; i < 49; i++)
             {
                 if (msg.info.links[i].ack == balloc::APPROVE)
                 {
@@ -651,7 +640,7 @@ void msg2nd(const balloc::balloc_msg_t &msg, Packet *p)
     op_pk_fd_set_int32(p, 2, msg.phase, 2);
     op_pk_fd_set_int32(p, 3, msg.dst, 8);
     op_pk_nfd_set_int32(p, "clock", msg.session);
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
 
         switch (msg.phase)
@@ -684,7 +673,7 @@ balloc::balloc_msg_t nd2msg(Packet *p)
     op_pk_fd_get_int32(p, 1, (int *)&msg.info.id);
     op_pk_fd_get_int32(p, 2, (int *)&msg.phase);
     op_pk_fd_get_int32(p, 3, (int *)&msg.dst);
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         int rti, ack, id;
         op_pk_fd_get_int32(p, 7 + 3 * i, &ack);
@@ -724,7 +713,7 @@ Packet *msg2pkt(const balloc::balloc_msg_t &msg)
     op_pk_fd_set_int32(p, 1, msg.dst, 8);
     op_pk_fd_set_int32(p, 2, msg.phase, 8);
     op_pk_fd_set_int32(p, 3, msg.session, 24);
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         op_pk_fd_set_int32(p, 4 * i + 4, msg.info.links[i].command, 4);
         op_pk_fd_set_int32(p, 4 * i + 5, msg.info.links[i].type, 4);
@@ -742,7 +731,7 @@ balloc::balloc_msg_t pkt2msg(Packet *p)
     op_pk_fd_get_int32(p, 1, (int *)&msg.dst);
     op_pk_fd_get_int32(p, 2, (int *)&msg.phase);
     op_pk_fd_get_int32(p, 3, (int *)&msg.session);
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         op_pk_fd_get_int32(p, 4 * i + 4, (int *)&msg.info.links[i].command);
         op_pk_fd_get_int32(p, 4 * i + 5, (int *)&msg.info.links[i].type);

@@ -64,7 +64,7 @@ typedef struct beacon
 typedef struct beacon_info
 {
     unsigned int id;
-    beacon_t links[34];
+    beacon_t links[49];
 } beacon_info_t;
 
 typedef struct balloc_msg //beacon allocation message 90byte

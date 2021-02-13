@@ -39,7 +39,7 @@ const std::pair<beacon_info_t, bool> allocator::handle_req(const beacon_info_t &
     ret.first = beacons;
     ret.second = false;
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         printf("[%d]handle_req:[%d]{id = %d mode = %s type = %s cmd = %s}\n",
                beacons.id, i, ba.links[i].id,
@@ -105,7 +105,7 @@ bool allocator::handle_ack(const session &s, const beacon_info_t &ba)
 
     auto req = s.get_req();
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         printf("[%d]handle_ack:[%d]{id = %d mode = %s type = %s ack = %s sessionid = %d}\n",
                beacons.id, i, ba.links[i].id,
@@ -207,11 +207,12 @@ const std::pair<balloc_msg *, bool> allocator::on_recv(const balloc_msg &ba, uns
 
     for (auto i = sessions.begin(); i != sessions.end();)
     {
+        // check whether some req expired, any time can check
         if (i->shoud_be_removed(clock))
         {
             printf("[%d]should_be_removed session_id = %d dst = %d\n", beacons.id, i->get_session_id(), i->get_dst());
             auto req = i->get_req();
-            for (int j = 0; j < 34; j++)
+            for (int j = 0; j < 49; j++)
             {
                 if (req.links[j].command != MAINTAIN)
                 {
@@ -276,7 +277,7 @@ const std::pair<std::map<int, balloc_msg_t>, bool> allocator::req_beacon(const b
 
             printf("[%d]should_be_removed session_id = %d dst = %d\n", beacons.id, i->get_session_id(), i->get_dst());
             auto req = i->get_req();
-            for (int j = 0; j < 34; j++)
+            for (int j = 0; j < 49; j++)
             {
                 if (req.links[j].command != MAINTAIN)
                 {
@@ -305,7 +306,7 @@ const std::pair<std::map<int, balloc_msg_t>, bool> allocator::req_beacon(const b
         for (auto i = r.first.begin(); i != r.first.end(); i++)
         {
 
-            session_t s(neighbor.id, i->second, type, clock, 0.036/18.0f * 1e6);
+            session_t s(neighbor.id, i->second, type, clock, 0.001 * 1e6);
             balloc_msg_t msg;
             memset(&msg, 0x00, sizeof(msg));
             msg.dst = i->first;
@@ -333,12 +334,12 @@ const std::pair<std::map<int, balloc_msg_t>, bool> allocator::req_beacon(const b
         for (auto i = r.first.begin(); i != r.first.end(); i++)
         {
 
-            session_t s(neighbor.id, i->second, type, clock, 0.072 * 1e6);
+            session_t s(neighbor.id, i->second, type, clock, 0.1 * 1e6);       // after two frame (100ms), it is expired
             balloc_msg_t msg;
-            memset(&msg, 0x00, sizeof(msg));
+            memset(&msg, 0x00, sizeof(msg));    // clear               
             msg.dst = i->first;
             msg.phase = REQ;
-            msg.session = s.get_session_id();
+            msg.session = s.get_session_id();   // once session is created, there will be new id
             msg.info = std::move(i->second);
             ret.first.insert(std::make_pair(i->first, std::move(msg)));
             sessions.push_back(s);
@@ -385,26 +386,14 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_prim_beacon(c
     ret.first = std::map<int, beacon_info_t>();
     ret.second = false;
 
-    std::vector<int> vaccum_send, vaccum_receive, vaccum;
+    std::vector<int> vaccum;
     int has_tx = 0;
     int has_rx = 0;
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         if (beacons.links[i].type == VACCANT && ba.links[i].type == VACCANT)
         {
-            int j = i%2 == 0 ? i+1 : i-1;
-            if (beacons.links[j].mode == SEND)
-            {
-                vaccum_send.push_back(i);
-            } 
-            else if (beacons.links[j].mode == RECV)
-            {
-                vaccum_receive.push_back(i);
-            }
-            else
-            {
-                vaccum.push_back(i);
-            }
+            vaccum.push_back(i);
         }
 
         if (beacons.links[i].type == PRIMARY && beacons.links[i].id == ba.id)
@@ -420,7 +409,7 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_prim_beacon(c
         }
     }
 
-    if ((vaccum.size() + vaccum_send.size() + vaccum_receive.size()) < 1 || has_tx && has_rx)
+    if (vaccum.size() < 1 || has_tx && has_rx)
         return ret;
 
     ret.second = true;
@@ -430,36 +419,19 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_prim_beacon(c
     // std::random_shuffle(vaccum_send.begin(), vaccum_send.end());
     // std::random_shuffle(vaccum_receive.begin(), vaccum_receive.end());
 
-    for (auto i = vaccum_receive.begin(); i != vaccum_receive.end(); ++i)
-    {
-        if (!has_rx)
-        {
-            beacons.links[*i].type = PREORDAINED;
-            req.links[*i].mode = RECV;
-            req.links[*i].type = PRIMARY;
-            req.links[*i].command = ALLOCATE;
-            has_rx = 1;
-            break;
-        }
-    }
-
-    for (auto i = vaccum_send.begin(); i != vaccum_send.end(); ++i)
-    {
-        if (!has_tx)
-        {
-            beacons.links[*i].type = PREORDAINED;
-            req.links[*i].mode = SEND;
-            req.links[*i].type = PRIMARY;
-            req.links[*i].command = ALLOCATE;
-            has_tx = 1;
-            break;
-        }
-    }
-
     if (!has_rx || !has_tx)
     {
         for (auto i = vaccum.begin(); i != vaccum.end(); ++i)
         {
+            if (!has_tx)
+            {
+                beacons.links[*i].type = PREORDAINED;
+                req.links[*i].mode = SEND;
+                req.links[*i].type = PRIMARY;
+                req.links[*i].command = ALLOCATE;
+                has_tx = 1;
+                continue;
+            }
             if (!has_rx)
             {
                 beacons.links[*i].type = PREORDAINED;
@@ -470,19 +442,10 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_prim_beacon(c
                 continue;
             }
 
-            if (!has_tx)
-            {
-                beacons.links[*i].type = PREORDAINED;
-                req.links[*i].mode = SEND;
-                req.links[*i].type = PRIMARY;
-                req.links[*i].command = ALLOCATE;
-                has_tx = 1;
-                continue;
-            }
         }
     }
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         printf("[%d]req_prim_beacon:[%d]{id = %d mode = %s type = %s cmd = %s}\n",
                beacons.id, i, req.links[i].id,
@@ -508,22 +471,14 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_ext_beacon(co
         return ret;
     }
 
-    std::vector<int> vaccum, vaccum_send;
+    std::vector<int> vaccum;
     std::vector<int> ext_ocup;
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
-        if (beacons.links[i].type == VACCANT && ba.links[i].type == VACCANT)
+        if (beacons.links[i].type == VACCANT && beacons.links[i].mode == INVALID && ba.links[i].type == VACCANT)
         {
-            int j = (i%2) == 0 ? i+1 : i-1;
-            if (beacons.links[j].mode == SEND)
-            {
-                vaccum_send.push_back(i);
-            }
-            else if (beacons.links[j].mode == INVALID)
-            {
-                vaccum.push_back(i);
-            }
+            vaccum.push_back(i);
         }
 
         if (beacons.links[i].type == EXTENDED && beacons.links[i].id == ba.id && beacons.links[i].mode == SEND)
@@ -538,9 +493,7 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_ext_beacon(co
     // std::random_shuffle(vaccum_send.begin(), vaccum_send.end());
     // std::random_shuffle(ext_ocup.begin(), ext_ocup.end());
 
-    vaccum_send.insert(vaccum_send.end(), vaccum.begin(), vaccum.end());
-
-    auto set = num > 0 ? vaccum_send : ext_ocup;
+    auto set = num > 0 ? vaccum : ext_ocup;
 
     if (set.size() == 0)
     {
@@ -577,7 +530,7 @@ const std::pair<std::map<int, beacon_info_t>, bool> allocator::req_ext_beacon(co
         ret.second = true;
     }
 
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         printf("[%d]req_ext_beacon:[%d]{id = %d mode = %s type = %s cmd = %s}\n",
                beacons.id, i, req.links[i].id,
@@ -691,7 +644,7 @@ unsigned int allocator::session::get_seq_id()
 const beacon_info_t allocator::get_beacon_table() const
 {
     beacon_info_t info = beacons;
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
         printf("[%d]beacon_table:[%d]{id = %d mode = %s(%d) type = %s}\n", info.id, i, beacons.links[i].id, string_mode[(unsigned int)(beacons.links[i].mode)], (unsigned int)beacons.links[i].mode, string_type[(unsigned int)(beacons.links[i].type)]);
     return std::move(info);
 }
@@ -703,7 +656,7 @@ int balloc::allocator::session::get_dst() const
 
 void balloc::allocator::release(int d)
 {
-    for (int i = 0; i < 34; i++)
+    for (int i = 0; i < 49; i++)
     {
         if (beacons.links[i].id == d)
         {

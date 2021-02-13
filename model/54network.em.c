@@ -306,7 +306,7 @@ int main(int argc, char *argv[])
                             "ar.target longitude", COMP_CONTENTS, (double)0,
                             "ar.target longitude", COMP_USER_INTENDED, EMAC_ENABLED,
                             "ar.pointing ref. phi", COMP_PROMOTE, EMAC_DISABLED,
-                            "ar.pointing ref. phi", COMP_CONTENTS, (double) 21.0906,
+                            "ar.pointing ref. phi", COMP_CONTENTS, (double) 25.2428,
                             "ar.pointing ref. phi", COMP_USER_INTENDED, EMAC_ENABLED,
                             EMAC_EOL);
         i++;

@@ -30,7 +30,7 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     plot(UD,DELAY);
     
     
-    xlabel('ç«¯-ç«¯æ—¶å»¶ t/s');
+    xlabel('¶Ë-¶ËÊ±ÑÓ t/s');
     ylabel('%');
     
     
@@ -50,8 +50,8 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     P = RX./TX*100;
     P(P > 100) = 100;
     plot(UT,P);
-    xlabel('ä»¿çœŸæ—¶é—´/ç§’');
-    ylabel('æˆåŠŸé€è¾¾ç‡ %');
+    xlabel('·ÂÕæÊ±¼ä/Ãë');
+    ylabel('³É¹¦ËÍ´ïÂÊ %');
     
     f3 = figure;
     DATA = zeros(size(UT,1),1);
@@ -61,14 +61,14 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     end
     
     plot(UT,DATA);
-    ylabel('ç«¯-ç«¯æ•°æ®ä¼ è¾“é€Ÿç‡ (Mb/s)');
-    xlabel('ä»¿çœŸæ—¶é—´/ç§’');
+    ylabel('¶Ë-¶ËÊı¾İ´«ÊäËÙÂÊ (Mb/s)');
+    xlabel('·ÂÕæÊ±¼ä/Ãë');
     
     f4 = figure;
     
     Mrelay = csvread(fname_relay);
     
-    Mrelay(Mrelay(:,2)==Mrelay(:,4),:) = [];    % ä¸ç»Ÿè®¡å‘é€ç«¯
+    Mrelay(Mrelay(:,2)==Mrelay(:,4),:) = [];    % ²»Í³¼Æ·¢ËÍ¶Ë
     
     
     Trelay = [Mrelay(:,1);TR];
@@ -93,8 +93,8 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     end
     
     plot(UT,DATAtotal);
-    ylabel('ç½‘ç»œååé‡ (Mb/s)');
-    xlabel('ä»¿çœŸæ—¶é—´/ç§’');
+    ylabel('ÍøÂçÍÌÍÂÁ¿ (Mb/s)');
+    xlabel('·ÂÕæÊ±¼ä/Ãë');
     
     f5 = figure;
     f5.PaperUnits = 'centimeters';
@@ -126,7 +126,7 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     
     plot(UDPH,PDF_UDPH,UDPH,PDF_UDPH_URG);
     xt = xticks;
-    xt = 200*10.^xt;
+    xt = 50*10.^xt;
     
     xl = cell(size(xt,1),size(xt,2));
     
@@ -136,9 +136,9 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     
     xticklabels(xl);
     
-    legend({'æ‰€æœ‰ä¸šåŠ¡','ç´§æ€¥ä¸šåŠ¡'},'location','southeast');
+    legend({'ËùÓĞÒµÎñ','½ô¼±ÒµÎñ'},'location','southeast');
     
-    xlabel('å•è·³æ—¶å»¶ \tau_{hop}</ms');
+    xlabel('µ¥ÌøÊ±ÑÓ \tau_{hop}</ms');
     ylabel('%');
     
     f6 = figure;
@@ -146,7 +146,7 @@ function [f1,f2,f3,f4,f5,f6] = dplot(netname)
     f6.PaperSize = [16,12];
     histogram(DELAY_PER_HOP*1000, [0:10:1000]);
     
-    xlabel('å•è·³æ—¶å»¶/ms');
-    ylabel('æ¥æ”¶çš„æ•°æ®åŒ…æ•°ç›®');
+    xlabel('µ¥ÌøÊ±ÑÓ/ms');
+    ylabel('½ÓÊÕµÄÊı¾İ°üÊıÄ¿');
     
     end
